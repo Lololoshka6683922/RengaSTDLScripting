@@ -44,41 +44,41 @@
 Глобальные функции
 ------------------
 
-Глобальные функции не требуют объявления. Их можно просто вызвать в соответствующем модуле.
+Глобальные функции не требуют объявления.
 
-* Создать 3D тело (в модуле *geometry.lua*)
+* Создать 3D-тело 
 
 .. function:: renga.geometry.detailed.add_solid(*args)
 
     :param args: В качестве аргументов передаются 3D тела.
     :type args: :doc:`3D тела <../geometry>`
 
-* Создать условное изображение (в модуле *symbolic.lua*)
+* Создать условное изображение
 
 .. function:: renga.geometry.symbolic.add_planar_geometry(*args)
 
     :param args: В качестве аргументов передается плоская геометрия.
     :type args: :doc:`PlanarGeometry <../planar>`
 
-* Создать символьное изображение (в модуле *conventional.lua*)
+* Создать символьное изображение
 
 .. function:: renga.geometry.symbol.add_planar_geometry(*args)
 
     :param args: В качестве аргументов передается плоская геометрия.
     :type args: :doc:`PlanarGeometry <../planar>`
 
-* Создать вспомогательную 3D геометрию
+* Создать вспомогательную 3D-геометрию
 
 .. function:: renga.geometry.aux.detailed.add_solid(*args)
 
-* Создать точку подключения (порт) оборудования (в модуле *connectors.lua*)
+* Создать точку подключения (порт) оборудования
 
 .. function:: renga.add_connector(port)
 
     :param port: Задается порт.
     :type port: :doc:`Port <../ports>`
 
-* Задать видимость параметра (в модуле *parameters.lua*)
+* Задать видимость параметра
 
 .. function:: renga.set_param_visible(parameter, bool)
 

@@ -1,7 +1,7 @@
 Базовые типы геометрии
 =======================
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam id diam maecenas ultricies mi eget. Aliquam nulla facilisi cras fermentum odio eu feugiat pretium. Sollicitudin aliquam ultrices sagittis orci a scelerisque. Dui nunc mattis enim ut tellus elementum sagittis vitae et. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus. Dolor sed viverra ipsum nunc aliquet. Enim sed faucibus turpis in eu mi bibendum neque egestas. Laoreet non curabitur gravida arcu ac tortor dignissim convallis aenean. Orci phasellus egestas tellus rutrum.
+Служат для определения более сложных геометрических примитивов (:doc:`двумерных </symbolic>` и :doc:`трёхмерных </geometry>`), а также для размещения в локальной системе координат.
 
 .. _point2d:
 

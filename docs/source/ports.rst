@@ -3,91 +3,11 @@
 
 Порты служат для подключения оборудования к трассам инженерных систем.
 
-Производные функции
--------------------
-
-Порты трубопроводных систем
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Для резьбового соединения
-"""""""""""""""""""""""""
-
 Конструктор:
 
-.. function:: PipeThreadedPort(thread_size, flow_direction, pipe_system_group)
 
-    :param thread_size: Задает размер резьбы трубы.
-    :type thread_size: :ref:`Enum <thread_size>`
-    :param flow_direction: Задает направление порта.
-    :type flow_direction: :ref:`Enum <flow>`
-    :param pipe_system_category: Задает категорию трубопроводной системы.
-    :type pipe_system_category: :ref:`Enum <p_system>`
-
-Для остальных соединений
-""""""""""""""""""""""""
-
-Конструктор:
-
-.. function:: PipePort(connector_type, flow_direction, pipe_system_group)
-
-    :param connector_type: Задает вид соединения.
-    :type connector_type: :ref:`Enum <pipe_type>`
-    :param flow_direction: Задает направление порта.
-    :type flow_direction: :ref:`Enum <flow>`
-    :param pipe_system_category: Задает категорию трубовпроводной системы.
-    :type pipe_system_category: :ref:`Enum <p_system>`
-
-Порты вентиляционных систем
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Порт круглого воздуховода
-"""""""""""""""""""""""""
-
-Конструктор:
-
-.. function:: CircularAirPort(air_connector_type, diameter, flow_direction, duct_system_group)
-
-    :param air_connector_type: Задает вид соединения.
-    :type air_connector_type: :ref:`Enum <air_type>`
-    :param diameter: Задает диаметр воздуховода.
-    :type diameter: number
-    :param flow_direction: Задает направление порта.
-    :type flow_direction: :ref:`Enum <flow>`
-    :param duct_system_category: Задает категорию вентиляционной системы.
-    :type duct_system_category: :ref:`Enum <d_system>`
-
-Порт прямоугольного воздуховода
-"""""""""""""""""""""""""""""""
-
-Конструктор:
-
-.. function:: RectangularAirPort(air_connector_type, width, height, flow_direction, duct_system_group)
-
-    :param air_connector_type: Задает вид соединения.
-    :type air_connector_type: :ref:`Enum <air_type>`
-    :param width: Задает ширину воздуховода.
-    :type width: number
-    :param height: Задает высоту воздуховода.
-    :type height: number
-    :param flow_direction: Задает направление порта.
-    :type flow_direction: :ref:`Enum <flow>`
-    :param duct_system_category: Задает категорию вентиляционной системы.
-    :type duct_system_category: :ref:`Enum <d_system>`
-
-Порты электрических систем
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Конструктор:
-
-.. function:: ElectricalPort(flow_direction, electrical_system_category)
-
-    :param flow_direction: Задает направление порта.
-    :type flow_direction: :ref:`Enum <flow>`
-    :param electrical_system_category: Задает категорию электрической системы.
-    :type electrical_system_category: :ref:`Enum <e_system>`
-
-Методы
-------
+Методы класса
+-------------
 
 * Разместить порт в локальной системе координат
 
@@ -246,15 +166,15 @@
 
 * **flow_direction**
 
-+---------------+----------------+
-| идентификатор | описание       |
-+===============+================+
-| inlet         | вход           |
-+---------------+----------------+
-| outlet        | выход          |
-+---------------+----------------+
-| insigificant  | неопределенный |
-+---------------+----------------+
++-------------------+----------------+
+| идентификатор     | описание       |
++===================+================+
+| inlet             | вход           |
++-------------------+----------------+
+| outlet            | выход          |
++-------------------+----------------+
+| inlet_and_outlet  | неопределенный |
++-------------------+----------------+
 
 .. _thread_size:
 

@@ -62,7 +62,7 @@ Cкрипты, описывающие оборудование, должны с�
 
     local plane_geometry = PlanarGeometryPlane()
     plane_geometry:add_curve(Rectangle(size, size))
-    renga.geometry.symbolic.add_planar_geometry(plane_geometry:set_unscalable(true))
+    renga.geometry.symbol.add_planar_geometry(plane_geometry:set_unscalable(true))
 
 * Создать точку подключения (порт) оборудования
 

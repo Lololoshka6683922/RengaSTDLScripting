@@ -1,9 +1,9 @@
 3D Примитивы (класс Solid)
 ==========================
 
-Общий класс **Solid** не имеет конструктора. Содержит функции, создающие различные 3D-тела. Служит для построения 3D-геометрии оборудования.
+Общий класс **Solid** не имеет конструктора. Содержит функции, порождающие твердотельную геометрию. Служит для построения 3D-геометрии оборудования.
 
-Производные функции
+Порождающие функции
 -------------------
 
 Куб
@@ -11,12 +11,12 @@
 
 Правильный многогранник, каждая грань которого представляет собой квадрат.
 
-Конструктор:
-
 .. function:: Cube(size)
 
     :param size: Задает размер грани куба.
     :type size: number
+    :return: Твердотельная геометрия.
+    :rtype: Solid
 
 Пример кода:
 
@@ -29,13 +29,12 @@
 
 .. image:: _static/Cube.png
     :scale: 50 %
+    :height: 577px
 
 Параллелепипед
 ^^^^^^^^^^^^^^
 
 Четырехугольная призма, все грани которой являются прямоугольниками (прямоугольный параллелепипед).
-
-Конструктор:
 
 .. function:: Box(length, width, height)
 
@@ -45,6 +44,8 @@
     :type width: number
     :param height: Задает высоту параллелепипеда.
     :type height: number
+    :return: Твердотельная геометрия.
+    :rtype: Solid
 
 Пример кода:
 
@@ -61,12 +62,12 @@
 Сфера
 ^^^^^
 
-Конструктор:
-
 .. function:: Sphere(radius)
 
     :param radius: Задает радиус сферы.
     :type radius: number
+    :return: Твердотельная геометрия.
+    :rtype: Solid
 
 Пример кода:
 
@@ -85,14 +86,14 @@
 
 Тело, ограниченное цилиндрической поверхностью и двумя параллельными плоскостями, пересекающими её.
 
-Конструктор:
-
 .. function:: Cylinder(radius, height)
 
     :param radius: Задает радиус цилиндра.
     :type radius: number
     :param height: Задает высоту цилиндра.
     :type height: number
+    :return: Твердотельная геометрия.
+    :rtype: Solid
 
 Пример кода:
 
@@ -111,14 +112,14 @@
 
 Прямой конус, основанием которого является окружность и ортогональная проекция вершины конуса на плоскость основания совпадает с этим центром.
 
-Конструктор:
-
 .. function:: Cone(radius, height)
 
     :param radius: Задает радиус конуса.
     :type radius: number
     :param height: Задает высоту конуса.
     :type height: number
+    :return: Твердотельная геометрия.
+    :rtype: Solid
 
 Пример кода:
 
@@ -137,8 +138,6 @@
 
 Часть конуса, лежащая между основанием и плоскостью, параллельной основанию и находящейся между вершиной и основанием.
 
-Конструктор:
-
 .. function:: ConicalFrustum(bottom_radius, top_radius, height)
 
     :param bottom_radius: Задает радиус основания усеченного конуса.
@@ -147,6 +146,8 @@
     :type top_radius: number    
     :param height: Задает высоту усеченного конуса.
     :type height: number
+    :return: Твердотельная геометрия.
+    :rtype: Solid
 
 Пример кода:
 
@@ -165,8 +166,6 @@
 
 Основанием пирамиды является прямоугольник.
 
-Конструктор:
-
 .. function:: Pyramid(size_x, size_y, height)
 
     :param size_x: Задает размер основания пирамиды по оси X.
@@ -175,6 +174,8 @@
     :type size_y: number    
     :param height: Задает высоту пирамиды.
     :type height: number
+    :return: Твердотельная геометрия.
+    :rtype: Solid
 
 Пример кода:
 
@@ -191,14 +192,14 @@
 Тело выдавливания
 ^^^^^^^^^^^^^^^^^
 
-Конструктор:
-
 .. function:: Extrusion(contour, height)
 
     :param contour: Задает плоский контур выдавливания.
     :type contour: :ref:`Curve2d <curve2d>`   
     :param height: Задает высоту тела выдавливания.
     :type height: number
+    :return: Твердотельная геометрия.
+    :rtype: Solid
 
 Пример кода:
 
@@ -229,8 +230,6 @@
 Тело выдавливания с толщиной
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Конструктор:
-
 .. function:: ExtrusionWithThickness(contour, height, thickness)
 
     :param contour: Задает плоский контур выдавливания.
@@ -239,6 +238,8 @@
     :type height: number
     :param thickness: Задает толщину контура выдавливания.
     :type thickness: number
+    :return: Твердотельная геометрия.
+    :rtype: Solid
 
 Пример кода:
 
@@ -269,14 +270,14 @@
 Построение тела по плоским сечениям
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Конструктор:
-
 .. function:: CreateLoftedSolid({profiles}, {placements})
 
     :param {profiles}: Задает таблицу плоских контуров.
     :type {profiles}: table of :ref:`Curves2d <curve2d>`   
     :param {placements}: Задает таблицу координатных плоскостей в 3D пространстве.
     :type {placements}: table of :ref:`Placements3d <placement3d>`
+    :return: Твердотельная геометрия.
+    :rtype: Solid
 
 Пример кода:
 
@@ -303,8 +304,6 @@
 Построение кинематического тела путем движения образующей кривой вдоль направляющей кривой
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Конструктор:
-
 .. function:: CreateLoftedSolidByProfilesAndPath(start_profile, end_profile, path)
 
     :param start_profile: Задает плоский контур в начале.
@@ -313,6 +312,8 @@
     :type end_profile: :ref:`Curve2d <curve2d>`
     :param path: Задает путь движения в виде трехмерной кривой.
     :type path: :ref:`Curve3d <curve3d>`
+    :return: Твердотельная геометрия.
+    :rtype: Solid
 
 Пример кода:
 
@@ -340,8 +341,6 @@
 ^^^^^^^^^^^^^
 
 Вращение плоского замкнутого контура вокруг заданной оси на указанный угол.
-
-Конструктор:
 
 .. function:: Revolution(placement, contour, origin, axis, counterClockwiseAngle, ClockwiseAngle)
 
@@ -382,7 +381,7 @@
 Методы класса
 -------------
 
-Общие методы 3D примитивов Solid.
+Общие методы твердотельной геометрии Solid.
 
 * Сместить по осям X, Y, Z
 

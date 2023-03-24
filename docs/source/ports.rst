@@ -19,12 +19,12 @@
 
 * Задать у порта якорь на трассе
 
-.. function:: :anchor(placement:axis_z())
+.. function:: :anchor(axis)
 
     :param placement: Задает ЛСК порта.
     :type placement: :ref:`Placement3d <placement3d>`
-    :param axis_z(): Метод, возвращающий ось Z у заданного :ref:`Placement3d <placement3d>`.
-    :type axis_z(): function
+    :param axis: Ось порта.
+    :type axis: :ref:`Axis <axis>`
 
 * Задать параметры порта трубопроводных систем
 

@@ -11,9 +11,22 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: Обзор функций:
 
    environment
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Параметризация:
+
+   createparams
+
+   assignparams
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Обзор функций:
+
+   packages
 
    basetypes
 
@@ -26,16 +39,6 @@
    ports
 
    auxiliary
-
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Параметризация:
-
-   createparams
-
-   assignparams
-
 
 Обучающий проект: Создание своего оборудования в Renga
 ------------------------------------------------------

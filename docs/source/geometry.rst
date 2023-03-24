@@ -1,5 +1,5 @@
-3D Примитивы (класс Solid)
-==========================
+Твердотельная 3D-геометрия (класс Solid)
+========================================
 
 Общий класс **Solid** не имеет конструктора. Содержит функции, порождающие твердотельную геометрию. Служит для построения 3D-геометрии оборудования.
 
@@ -18,9 +18,8 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-Пример кода:
-
 .. code-block:: console
+    :caption: Пример кода:
 
     local solid = Cube(20)
     renga.geometry.detailed.add_solid(solid)
@@ -28,8 +27,8 @@
 Результат:
 
 .. image:: _static/Cube.png
-    :scale: 50 %
-    :height: 577px
+    :scale: 50%
+    :align: center
 
 Параллелепипед
 ^^^^^^^^^^^^^^
@@ -47,9 +46,8 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-Пример кода:
-
 .. code-block:: console
+    :caption: Пример кода:
 
     local solid = Box(40, 15, 20)
     renga.geometry.detailed.add_solid(solid)
@@ -69,9 +67,8 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-Пример кода:
-
 .. code-block:: console
+    :caption: Пример кода:
 
     local solid = Sphere(10)
     renga.geometry.detailed.add_solid(solid:hide_smooth_edges())
@@ -95,9 +92,8 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-Пример кода:
-
 .. code-block:: console
+    :caption: Пример кода:
 
     local solid = Cylinder(10, 40)
     renga.geometry.detailed.add_solid(solid:hide_smooth_edges())
@@ -121,9 +117,8 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-Пример кода:
-
 .. code-block:: console
+    :caption: Пример кода:
 
     local solid = Cone(10, 40)
     renga.geometry.detailed.add_solid(solid:hide_smooth_edges())
@@ -149,9 +144,8 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-Пример кода:
-
 .. code-block:: console
+    :caption: Пример кода:
 
     local solid = ConicalFrustum(10, 5, 20)
     renga.geometry.detailed.add_solid(solid:hide_smooth_edges())
@@ -177,9 +171,8 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-Пример кода:
-
 .. code-block:: console
+    :caption: Пример кода:
 
     local solid = Pyramid(25, 15, 20)
     renga.geometry.detailed.add_solid(solid)
@@ -201,9 +194,8 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-Пример кода:
-
 .. code-block:: console
+    :caption: Пример кода:
 
     local points = {
         Point2d(0, 0),
@@ -241,9 +233,8 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-Пример кода:
-
 .. code-block:: console
+    :caption: Пример кода:
 
     local points = {
         Point2d(0, 0),
@@ -279,9 +270,8 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-Пример кода:
-
 .. code-block:: console
+    :caption: Пример кода:
 
     local profiles = {
         Rectangle(30, 30),
@@ -315,9 +305,8 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-Пример кода:
-
 .. code-block:: console
+    :caption: Пример кода:
 
     local start_profile = Rectangle(30, 30)
     local end_profile = Circle(Point2d(0, 0), 10)
@@ -357,9 +346,8 @@
     :param ClockwiseAngle: Задает угол вращения по часовой стрелке.
     :type ClockwiseAngle: number
 
-Пример кода:
-
 .. code-block:: console
+    :caption: Пример кода:
 
     local placement = Placement3d(Point3d(0, 0, 0),
                                   Vector3d(1, 0, 0),

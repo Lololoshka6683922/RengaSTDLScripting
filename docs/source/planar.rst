@@ -7,9 +7,8 @@
 * :ref:`Двумерные кривые <curve2d>`
 * :ref:`Двумерные регионы <region>`
 
-Пример кода:
-
 .. code-block:: console
+    :caption: Пример кода:
 
     local geometry = PlanarGeometryPlane()
 

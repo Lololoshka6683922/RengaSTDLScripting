@@ -18,8 +18,9 @@
     :param args: В качестве аргументов передаётся твердотельная 3D-геометрия и его методы.
     :type args: :doc:`Solid <../geometry>`
 
-.. code-block:: console
+.. code-block:: lua
     :caption: Пример. Создание 3D-геометрии в форме куба с размером грани *size*:
+    :linenos:
 
     local solid = Cube(size)
     renga.geometry.detailed.add_solid(solid)
@@ -32,11 +33,12 @@
     :param args: В качестве аргументов передаётся плоская геометрия и ее методы.
     :type args: :doc:`PlanarGeometry <../planar>`
 
-.. code-block:: console
+.. code-block:: lua
     :caption: Пример. Создание условного отображения в виде квадрата с размером грани *size*:
+    :linenos:
 
-    local plane_geometry = PlanarGeometryPlane()
-    plane_geometry:add_curve(Rectangle(size, size))
+    local plane_geometry = PlanarGeometryPlane()    
+    plane_geometry:add_curve(Rectangle(size, size))    
     renga.geometry.symbolic.add_planar_geometry(plane_geometry)
 
 Создание символьного изображение оборудования
@@ -47,8 +49,9 @@
     :param args: В качестве аргументов передается плоская геометрия и ее методы.
     :type args: :doc:`PlanarGeometry <../planar>`
 
-.. code-block:: console
+.. code-block:: lua
     :caption: Пример. Создание символьного отображения в виде квадрата с размером грани *size*:
+    :linenos:
 
     local plane_geometry = PlanarGeometryPlane()
     plane_geometry:add_curve(Rectangle(size, size))

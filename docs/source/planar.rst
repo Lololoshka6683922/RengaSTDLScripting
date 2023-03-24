@@ -7,24 +7,25 @@
 * :ref:`Двумерные кривые <curve2d>`
 * :ref:`Двумерные регионы <region>`
 
-.. code-block:: console
+.. code-block:: lua
     :caption: Пример кода:
+    :linenos:
 
     local geometry = PlanarGeometryPlane()
-
     geometry:add_curve(Rectangle(20, 10))
     geometry:add_curve(Line(Point2d(10, -5),
                             Point2d(-10, 5)))
     geometry:add_hatch_basic(Region({ClosedContourByPoints({Point2d(10, -5),
                                                             Point2d(-10, 5),
                                                             Point2d(-10, -5)})}))
-
     renga.geometry.symbol.add_planar_geometry(geometry:set_unscalable(true))
 
 Результат:
 
 .. image:: _static/PlanarGeometry.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Порождающие функции
 -------------------

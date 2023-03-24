@@ -18,8 +18,9 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
+.. code-block:: lua
     :caption: Пример кода:
+    :linenos:
 
     local solid = Cube(20)
     renga.geometry.detailed.add_solid(solid)
@@ -27,7 +28,8 @@
 Результат:
 
 .. image:: _static/Cube.png
-    :scale: 50%
+    :height: 230 px
+    :width: 400 px
     :align: center
 
 Параллелепипед
@@ -46,8 +48,9 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
+.. code-block:: lua
     :caption: Пример кода:
+    :linenos:
 
     local solid = Box(40, 15, 20)
     renga.geometry.detailed.add_solid(solid)
@@ -55,7 +58,9 @@
 Результат:
 
 .. image:: _static/Box.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Сфера
 ^^^^^
@@ -67,8 +72,9 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
+.. code-block:: lua
     :caption: Пример кода:
+    :linenos:
 
     local solid = Sphere(10)
     renga.geometry.detailed.add_solid(solid:hide_smooth_edges())
@@ -76,7 +82,9 @@
 Результат:
 
 .. image:: _static/Sphere.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Цилиндр
 ^^^^^^^
@@ -92,8 +100,9 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
+.. code-block:: lua
     :caption: Пример кода:
+    :linenos:
 
     local solid = Cylinder(10, 40)
     renga.geometry.detailed.add_solid(solid:hide_smooth_edges())
@@ -101,7 +110,9 @@
 Результат:
 
 .. image:: _static/Cylinder.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Конус
 ^^^^^
@@ -117,8 +128,9 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
+.. code-block:: lua
     :caption: Пример кода:
+    :linenos:
 
     local solid = Cone(10, 40)
     renga.geometry.detailed.add_solid(solid:hide_smooth_edges())
@@ -126,7 +138,9 @@
 Результат:
 
 .. image:: _static/Cone.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Усеченный конус
 ^^^^^^^^^^^^^^^
@@ -144,8 +158,9 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
+.. code-block:: lua
     :caption: Пример кода:
+    :linenos:
 
     local solid = ConicalFrustum(10, 5, 20)
     renga.geometry.detailed.add_solid(solid:hide_smooth_edges())
@@ -153,7 +168,9 @@
 Результат:
 
 .. image:: _static/ConicalFrustum.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Пирамида с прямоугольным основанием
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -171,8 +188,9 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
+.. code-block:: lua
     :caption: Пример кода:
+    :linenos:
 
     local solid = Pyramid(25, 15, 20)
     renga.geometry.detailed.add_solid(solid)
@@ -180,7 +198,9 @@
 Результат:
 
 .. image:: _static/Pyramid.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Тело выдавливания
 ^^^^^^^^^^^^^^^^^
@@ -194,8 +214,9 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
+.. code-block:: lua
     :caption: Пример кода:
+    :linenos:
 
     local points = {
         Point2d(0, 0),
@@ -217,7 +238,9 @@
 Результат:
 
 .. image:: _static/Extrusion.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Тело выдавливания с толщиной
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -233,8 +256,9 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
+.. code-block:: lua
     :caption: Пример кода:
+    :linenos:
 
     local points = {
         Point2d(0, 0),
@@ -256,7 +280,9 @@
 Результат:
 
 .. image:: _static/ExtrusionWithThickness.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Построение тела по плоским сечениям
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -270,8 +296,9 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
+.. code-block:: lua
     :caption: Пример кода:
+    :linenos:
 
     local profiles = {
         Rectangle(30, 30),
@@ -289,7 +316,9 @@
 Результат:
 
 .. image:: _static/CreateLoftedSolid.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Построение кинематического тела путем движения образующей кривой вдоль направляющей кривой
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -305,8 +334,9 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
+.. code-block:: lua
     :caption: Пример кода:
+    :linenos:
 
     local start_profile = Rectangle(30, 30)
     local end_profile = Circle(Point2d(0, 0), 10)
@@ -324,7 +354,9 @@
 Результат:
 
 .. image:: _static/CreateLoftedSolidByProfilesAndPath.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Тело вращения
 ^^^^^^^^^^^^^
@@ -346,8 +378,9 @@
     :param ClockwiseAngle: Задает угол вращения по часовой стрелке.
     :type ClockwiseAngle: number
 
-.. code-block:: console
+.. code-block:: lua
     :caption: Пример кода:
+    :linenos:
 
     local placement = Placement3d(Point3d(0, 0, 0),
                                   Vector3d(1, 0, 0),
@@ -364,7 +397,9 @@
 Результат:
 
 .. image:: _static/Revolution.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Методы класса
 -------------
@@ -421,7 +456,9 @@
 Результат:
 
 .. image:: _static/Add_3D.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 * Булевое вычитание
 
@@ -439,4 +476,6 @@
 Результат:
 
 .. image:: _static/Sub_3D.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center

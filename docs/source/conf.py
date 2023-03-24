@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Renga LUA Guide'
-copyright = '2023, Eugene Kiryan'
+copyright = '2023, Renga Software'
 author = 'Eugene Kiryan'
 release = '1.0'
 

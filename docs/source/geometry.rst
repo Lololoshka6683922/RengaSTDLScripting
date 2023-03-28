@@ -14,7 +14,7 @@
 .. function:: Cube(size)
 
     :param size: Задает размер грани куба.
-    :type size: number
+    :type size: Number
     :return: Твердотельная геометрия.
     :rtype: Solid
 
@@ -40,11 +40,11 @@
 .. function:: Box(length, width, height)
 
     :param length: Задает длину параллелепипеда.
-    :type length: number
+    :type length: Number
     :param width: Задает глубину параллелепипеда.
-    :type width: number
+    :type width: Number
     :param height: Задает высоту параллелепипеда.
-    :type height: number
+    :type height: Number
     :return: Твердотельная геометрия.
     :rtype: Solid
 
@@ -68,7 +68,7 @@
 .. function:: Sphere(radius)
 
     :param radius: Задает радиус сферы.
-    :type radius: number
+    :type radius: Number
     :return: Твердотельная геометрия.
     :rtype: Solid
 
@@ -94,9 +94,9 @@
 .. function:: Cylinder(radius, height)
 
     :param radius: Задает радиус цилиндра.
-    :type radius: number
+    :type radius: Number
     :param height: Задает высоту цилиндра.
-    :type height: number
+    :type height: Number
     :return: Твердотельная геометрия.
     :rtype: Solid
 
@@ -122,9 +122,9 @@
 .. function:: Cone(radius, height)
 
     :param radius: Задает радиус конуса.
-    :type radius: number
+    :type radius: Number
     :param height: Задает высоту конуса.
-    :type height: number
+    :type height: Number
     :return: Твердотельная геометрия.
     :rtype: Solid
 
@@ -150,11 +150,11 @@
 .. function:: ConicalFrustum(bottom_radius, top_radius, height)
 
     :param bottom_radius: Задает радиус основания усеченного конуса.
-    :type bottom_radius: number
+    :type bottom_radius: Number
     :param top_radius: Задает радиус верха усеченного конуса.
-    :type top_radius: number    
+    :type top_radius: Number    
     :param height: Задает высоту усеченного конуса.
-    :type height: number
+    :type height: Number
     :return: Твердотельная геометрия.
     :rtype: Solid
 
@@ -180,11 +180,11 @@
 .. function:: Pyramid(size_x, size_y, height)
 
     :param size_x: Задает размер основания пирамиды по оси X.
-    :type size_x: number
+    :type size_x: Number
     :param size_y: Задает размер основания пирамиды по оси Y.
-    :type size_y: number    
+    :type size_y: Number    
     :param height: Задает высоту пирамиды.
-    :type height: number
+    :type height: Number
     :return: Твердотельная геометрия.
     :rtype: Solid
 
@@ -210,7 +210,7 @@
     :param contour: Задает плоский контур выдавливания.
     :type contour: :ref:`Curve2d <curve2d>`   
     :param height: Задает высоту тела выдавливания.
-    :type height: number
+    :type height: Number
     :return: Твердотельная геометрия.
     :rtype: Solid
 
@@ -250,9 +250,9 @@
     :param contour: Задает плоский контур выдавливания.
     :type contour: :ref:`Curve2d <curve2d>`   
     :param height: Задает высоту тела выдавливания.
-    :type height: number
+    :type height: Number
     :param thickness: Задает толщину контура выдавливания.
-    :type thickness: number
+    :type thickness: Number
     :return: Твердотельная геометрия.
     :rtype: Solid
 
@@ -374,9 +374,9 @@
     :param axis: Задает ориентацию (вектор) оси вращения.
     :type axis: :ref:`Vector3d <vector3d>`
     :param counterClockwiseAngle: Задает угол вращения против часовой стрелки.
-    :type counterClockwiseAngle: number
+    :type counterClockwiseAngle: Number
     :param ClockwiseAngle: Задает угол вращения по часовой стрелке.
-    :type ClockwiseAngle: number
+    :type ClockwiseAngle: Number
 
 .. code-block:: lua
     :caption: Пример кода:
@@ -411,11 +411,11 @@
 .. function:: :shift(d_x, d_y, d_z)
 
     :param d_x: Задает смещение по оси X.
-    :type d_x: number
+    :type d_x: Number
     :param d_y: Задает смещение по оси Y.
-    :type d_y: number
+    :type d_y: Number
     :param d_z: Задает смещение по оси Z.
-    :type d_z: number
+    :type d_z: Number
 
 * Повернуть относительно оси
 
@@ -424,7 +424,7 @@
     :param axis: Задает ось вращения.
     :type axis: :ref:`Axis <axis>`
     :param angle: Задает угол поворота.
-    :type angle: number
+    :type angle: Number
 
 * Разместить в относительной системе координат
 

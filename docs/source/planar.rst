@@ -11,14 +11,15 @@
     :caption: Пример кода:
     :linenos:
 
-    local geometry = PlanarGeometryPlane()
-    geometry:add_curve(Rectangle(20, 10))
-    geometry:add_curve(Line(Point2d(10, -5),
-                            Point2d(-10, 5)))
-    geometry:add_hatch_basic(Region({ClosedContourByPoints({Point2d(10, -5),
-                                                            Point2d(-10, 5),
-                                                            Point2d(-10, -5)})}))
-    renga.geometry.symbol.add_planar_geometry(geometry:set_unscalable(true))
+    local geometry = renga.api.PlanarGeometryPlane()
+    
+    geometry:add_curve(renga.api.Rectangle(20, 10))
+    geometry:add_curve(renga.api.Line(renga.api.Point2d(10, -5),
+                                      renga.api.Point2d(-10, 5)))
+    geometry:add_hatch_basic(renga.api.Region({renga.api.ClosedContourByPoints({renga.api.Point2d(10, -5),
+                                                                                renga.api.Point2d(-10, 5),
+                                                                                renga.api.Point2d(-10, -5)})}))
+    renga.geometry.symbol:add_planar_geometry(geometry:set_unscalable(true))
 
 Результат:
 

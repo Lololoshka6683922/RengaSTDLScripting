@@ -8,7 +8,7 @@
 * :ref:`Двумерные регионы <region>`
 
 .. code-block:: lua
-    :caption: Пример кода:
+    :caption: Пример 1:
     :linenos:
 
     local geometry = renga.api.PlanarGeometryPlane()

@@ -96,7 +96,7 @@
 
     :param center: Задает центр окружности.
     :type center: :ref:`Point2d <point2d>`
-    :param radius: Задает радуис окружности.
+    :param radius: Задает радиус окружности.
     :type radius: Number
 
 Замкнутый контур по точкам

@@ -12,12 +12,16 @@
 
 * Разместить порт в локальной системе координат
 
+.. note:: По-умолчанию порты создаются в начале координат 
+
 .. function:: :place(placement)
 
     :param placement: Задает ЛСК порта.
     :type placement: :ref:`Placement3d <placement3d>`
 
 * Задать у порта якорь на трассе
+
+.. note:: Если не задан, он будет соответствовать оси Z порта
 
 .. function:: :anchor(axis)
 

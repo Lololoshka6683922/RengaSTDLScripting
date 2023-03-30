@@ -22,6 +22,8 @@
 
    assignparams
 
+   coreenums
+
 .. toctree::
    :maxdepth: 2
    :caption: Обзор функций:

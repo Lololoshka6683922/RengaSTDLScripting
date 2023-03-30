@@ -14,20 +14,23 @@
 .. function:: Cube(size)
 
     :param size: Задает размер грани куба.
-    :type size: number
+    :type size: Number
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
-    :caption: Пример кода:
+.. code-block:: lua
+    :caption: Пример 1:
+    :linenos:
 
-    local solid = Cube(20)
-    renga.geometry.detailed.add_solid(solid)
+    local solid = renga.api.Cube(20)
+
+    renga.geometry.detailed:add_solid(solid)
 
 Результат:
 
 .. image:: _static/Cube.png
-    :scale: 50%
+    :height: 230 px
+    :width: 400 px
     :align: center
 
 Параллелепипед
@@ -38,24 +41,28 @@
 .. function:: Box(length, width, height)
 
     :param length: Задает длину параллелепипеда.
-    :type length: number
+    :type length: Number
     :param width: Задает глубину параллелепипеда.
-    :type width: number
+    :type width: Number
     :param height: Задает высоту параллелепипеда.
-    :type height: number
+    :type height: Number
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
-    :caption: Пример кода:
+.. code-block:: lua
+    :caption: Пример 2:
+    :linenos:
 
-    local solid = Box(40, 15, 20)
-    renga.geometry.detailed.add_solid(solid)
+    local solid = renga.api.Box(40, 15, 20)
+
+    renga.geometry.detailed:add_solid(solid)
 
 Результат:
 
 .. image:: _static/Box.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Сфера
 ^^^^^
@@ -63,20 +70,24 @@
 .. function:: Sphere(radius)
 
     :param radius: Задает радиус сферы.
-    :type radius: number
+    :type radius: Number
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
-    :caption: Пример кода:
+.. code-block:: lua
+    :caption: Пример 3:
+    :linenos:
 
-    local solid = Sphere(10)
-    renga.geometry.detailed.add_solid(solid:hide_smooth_edges())
+    local solid = renga.api.Sphere(10)
+
+    renga.geometry.detailed:add_solid(solid:hide_smooth_edges())
 
 Результат:
 
 .. image:: _static/Sphere.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Цилиндр
 ^^^^^^^
@@ -86,22 +97,26 @@
 .. function:: Cylinder(radius, height)
 
     :param radius: Задает радиус цилиндра.
-    :type radius: number
+    :type radius: Number
     :param height: Задает высоту цилиндра.
-    :type height: number
+    :type height: Number
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
-    :caption: Пример кода:
+.. code-block:: lua
+    :caption: Пример 4:
+    :linenos:
 
-    local solid = Cylinder(10, 40)
-    renga.geometry.detailed.add_solid(solid:hide_smooth_edges())
+    local solid = renga.api.Cylinder(10, 40)
+
+    renga.geometry.detailed:add_solid(solid:hide_smooth_edges())
 
 Результат:
 
 .. image:: _static/Cylinder.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Конус
 ^^^^^
@@ -111,22 +126,26 @@
 .. function:: Cone(radius, height)
 
     :param radius: Задает радиус конуса.
-    :type radius: number
+    :type radius: Number
     :param height: Задает высоту конуса.
-    :type height: number
+    :type height: Number
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
-    :caption: Пример кода:
+.. code-block:: lua
+    :caption: Пример 5:
+    :linenos:
 
-    local solid = Cone(10, 40)
-    renga.geometry.detailed.add_solid(solid:hide_smooth_edges())
+    local solid = renga.api.Cone(10, 40)
+
+    renga.geometry.detailed:add_solid(solid:hide_smooth_edges())
 
 Результат:
 
 .. image:: _static/Cone.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Усеченный конус
 ^^^^^^^^^^^^^^^
@@ -136,24 +155,28 @@
 .. function:: ConicalFrustum(bottom_radius, top_radius, height)
 
     :param bottom_radius: Задает радиус основания усеченного конуса.
-    :type bottom_radius: number
+    :type bottom_radius: Number
     :param top_radius: Задает радиус верха усеченного конуса.
-    :type top_radius: number    
+    :type top_radius: Number    
     :param height: Задает высоту усеченного конуса.
-    :type height: number
+    :type height: Number
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
-    :caption: Пример кода:
+.. code-block:: lua
+    :caption: Пример 6:
+    :linenos:
 
-    local solid = ConicalFrustum(10, 5, 20)
-    renga.geometry.detailed.add_solid(solid:hide_smooth_edges())
+    local solid = renga.api.ConicalFrustum(10, 5, 20)
+
+    renga.geometry.detailed:add_solid(solid:hide_smooth_edges())
 
 Результат:
 
 .. image:: _static/ConicalFrustum.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Пирамида с прямоугольным основанием
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -163,24 +186,28 @@
 .. function:: Pyramid(size_x, size_y, height)
 
     :param size_x: Задает размер основания пирамиды по оси X.
-    :type size_x: number
+    :type size_x: Number
     :param size_y: Задает размер основания пирамиды по оси Y.
-    :type size_y: number    
+    :type size_y: Number    
     :param height: Задает высоту пирамиды.
-    :type height: number
+    :type height: Number
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
-    :caption: Пример кода:
+.. code-block:: lua
+    :caption: Пример 7:
+    :linenos:
 
-    local solid = Pyramid(25, 15, 20)
-    renga.geometry.detailed.add_solid(solid)
+    local solid = renga.api.Pyramid(25, 15, 20)
+
+    renga.geometry.detailed:add_solid(solid)
 
 Результат:
 
 .. image:: _static/Pyramid.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Тело выдавливания
 ^^^^^^^^^^^^^^^^^
@@ -190,34 +217,38 @@
     :param contour: Задает плоский контур выдавливания.
     :type contour: :ref:`Curve2d <curve2d>`   
     :param height: Задает высоту тела выдавливания.
-    :type height: number
+    :type height: Number
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
-    :caption: Пример кода:
+.. code-block:: lua
+    :caption: Пример 8:
+    :linenos:
 
     local points = {
-        Point2d(0, 0),
-        Point2d(0, 10),
-        Point2d(10, 10),
-        Point2d(10, 8),
-        Point2d(8, 8),
-        Point2d(8, 6),
-        Point2d(6, 6),
-        Point2d(6, 4),
-        Point2d(4, 4),
-        Point2d(4, 2),
-        Point2d(2, 2),
-        Point2d(2, 0)}
-    local contour = ClosedContourByPoints(points)
-    local solid = Extrusion(contour, 40)
-    renga.geometry.detailed.add_solid(solid)
+        renga.api.Point2d(0, 0),
+        renga.api.Point2d(0, 10),
+        renga.api.Point2d(10, 10),
+        renga.api.Point2d(10, 8),
+        renga.api.Point2d(8, 8),
+        renga.api.Point2d(8, 6),
+        renga.api.Point2d(6, 6),
+        renga.api.Point2d(6, 4),
+        renga.api.Point2d(4, 4),
+        renga.api.Point2d(4, 2),
+        renga.api.Point2d(2, 2),
+        renga.api.Point2d(2, 0)}
+    local contour = renga.api.ClosedContourByPoints(points)
+    local solid = renga.api.Extrusion(contour, 40)
+
+    renga.geometry.detailed:add_solid(solid)
 
 Результат:
 
 .. image:: _static/Extrusion.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Тело выдавливания с толщиной
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -227,36 +258,40 @@
     :param contour: Задает плоский контур выдавливания.
     :type contour: :ref:`Curve2d <curve2d>`   
     :param height: Задает высоту тела выдавливания.
-    :type height: number
+    :type height: Number
     :param thickness: Задает толщину контура выдавливания.
-    :type thickness: number
+    :type thickness: Number
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
-    :caption: Пример кода:
+.. code-block:: lua
+    :caption: Пример 9:
+    :linenos:
 
     local points = {
-        Point2d(0, 0),
-        Point2d(0, 10),
-        Point2d(10, 10),
-        Point2d(10, 8),
-        Point2d(8, 8),
-        Point2d(8, 6),
-        Point2d(6, 6),
-        Point2d(6, 4),
-        Point2d(4, 4),
-        Point2d(4, 2),
-        Point2d(2, 2),
-        Point2d(2, 0)}
-    local contour = ClosedContourByPoints(points)
-    local solid = ExtrusionWithThickness(contour, 15, 0.5)
-    renga.geometry.detailed.add_solid(solid)
+        renga.api.Point2d(0, 0),
+        renga.api.Point2d(0, 10),
+        renga.api.Point2d(10, 10),
+        renga.api.Point2d(10, 8),
+        renga.api.Point2d(8, 8),
+        renga.api.Point2d(8, 6),
+        renga.api.Point2d(6, 6),
+        renga.api.Point2d(6, 4),
+        renga.api.Point2d(4, 4),
+        renga.api.Point2d(4, 2),
+        renga.api.Point2d(2, 2),
+        renga.api.Point2d(2, 0)}
+    local contour = renga.api.ClosedContourByPoints(points)
+    local solid = renga.api.ExtrusionWithThickness(contour, 15, 0.5)
+
+    renga.geometry.detailed:add_solid(solid)
 
 Результат:
 
 .. image:: _static/ExtrusionWithThickness.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Построение тела по плоским сечениям
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -270,26 +305,30 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
-    :caption: Пример кода:
+.. code-block:: lua
+    :caption: Пример 10:
+    :linenos:
 
     local profiles = {
-        Rectangle(30, 30),
-        Circle(Point2d(0, 0), 10)}
+        renga.api.Rectangle(30, 30),
+        renga.api.Circle(renga.api.Point2d(0, 0), 10)}
     local placements = {
-        Placement3d(Point3d(0, 0, 0),
-                    Vector3d(1, 0, 0),
-                    Vector3d(0, 1, 0)),
-        Placement3d(Point3d(40, 0, 0),
-                    Vector3d(1, 0, 0),
-                    Vector3d(0, 1, 0))}
-    local solid = CreateLoftedSolid(profiles, placements)
-    renga.geometry.detailed.add_solid(solid:hide_smooth_edges())
+        renga.api.Placement3d(renga.api.Point3d(0, 0, 0),
+                              renga.api.Vector3d(1, 0, 0),
+                              renga.api.Vector3d(0, 1, 0)),
+        renga.api.Placement3d(renga.api.Point3d(40, 0, 0),
+                              renga.api.Vector3d(1, 0, 0),
+                              renga.api.Vector3d(0, 1, 0))}
+    local solid = renga.api.CreateLoftedSolid(profiles, placements)
+
+    renga.geometry.detailed:add_solid(solid:hide_smooth_edges())
 
 Результат:
 
 .. image:: _static/CreateLoftedSolid.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Построение кинематического тела путем движения образующей кривой вдоль направляющей кривой
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -305,26 +344,30 @@
     :return: Твердотельная геометрия.
     :rtype: Solid
 
-.. code-block:: console
-    :caption: Пример кода:
+.. code-block:: lua
+    :caption: Пример 11:
+    :linenos:
 
-    local start_profile = Rectangle(30, 30)
-    local end_profile = Circle(Point2d(0, 0), 10)
-    local arc_2d = ArcByCenter(Point2d(0, 0),
-                               Point2d(-30, 0),
-                               Point2d(0, 30),
-                               true)
-    local arc_3d = Curve3dByCurveAndPlacement(arc_2d,
-                                              Placement3d(Point3d(0, 0, 0),
-                                                          Vector3d(0, -1, 0),
-                                                          Vector3d(0, 0, 1)))
-    local solid = CreateLoftedSolidByProfilesAndPath(start_profile, end_profile, arc_3d)
-    renga.geometry.detailed.add_solid(solid:hide_smooth_edges())
+    local start_profile = renga.api.Rectangle(30, 30)
+    local end_profile = renga.api.Circle(renga.api.Point2d(0, 0), 10)
+    local arc_2d = renga.api.ArcByCenter(renga.api.Point2d(0, 0),
+                                         renga.api.Point2d(-30, 0),
+                                         renga.api.Point2d(0, 30),
+                                         true)
+    local arc_3d = renga.api.Curve3dByCurveAndPlacement(arc_2d,
+                                                        renga.api.Placement3d(renga.api.Point3d(0, 0, 0),
+                                                                              renga.api.Vector3d(0, -1, 0),
+                                                                              renga.api.Vector3d(0, 0, 1)))
+    local solid = renga.api.CreateLoftedSolidByProfilesAndPath(start_profile, end_profile, arc_3d)
+
+    renga.geometry.detailed:add_solid(solid:hide_smooth_edges())
 
 Результат:
 
 .. image:: _static/CreateLoftedSolidByProfilesAndPath.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Тело вращения
 ^^^^^^^^^^^^^
@@ -342,29 +385,33 @@
     :param axis: Задает ориентацию (вектор) оси вращения.
     :type axis: :ref:`Vector3d <vector3d>`
     :param counterClockwiseAngle: Задает угол вращения против часовой стрелки.
-    :type counterClockwiseAngle: number
+    :type counterClockwiseAngle: Number
     :param ClockwiseAngle: Задает угол вращения по часовой стрелке.
-    :type ClockwiseAngle: number
+    :type ClockwiseAngle: Number
 
-.. code-block:: console
-    :caption: Пример кода:
+.. code-block:: lua
+    :caption: Пример 12:
+    :linenos:
 
-    local placement = Placement3d(Point3d(0, 0, 0),
-                                  Vector3d(1, 0, 0),
-                                  Vector3d(0, 1, 0))
-    local contour = Rectangle(6, 15):fillet_nth(3, 3):fillet_nth(5, 3)
-    local solid = Revolution(placement,
+    local placement = renga.api.Placement3d(renga.api.Point3d(0, 0, 0),
+                                            renga.api.Vector3d(1, 0, 0),
+                                            renga.api.Vector3d(0, 1, 0))
+    local contour = renga.api.Rectangle(6, 15):fillet_nth(3, 3):fillet_nth(5, 3)
+    local solid = renga.api.Revolution(placement,
                              contour,
-                             Point3d(0, 10, 0),
-                             Vector3d(0, -0.5, 1),
+                             renga.api.Point3d(0, 10, 0),
+                             renga.api.Vector3d(0, -0.5, 1),
                              0,
                              270)
-    renga.geometry.detailed.add_solid(solid:hide_smooth_edges())
+
+    renga.geometry.detailed:add_solid(solid:hide_smooth_edges())
 
 Результат:
 
 .. image:: _static/Revolution.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Методы класса
 -------------
@@ -376,11 +423,11 @@
 .. function:: :shift(d_x, d_y, d_z)
 
     :param d_x: Задает смещение по оси X.
-    :type d_x: number
+    :type d_x: Number
     :param d_y: Задает смещение по оси Y.
-    :type d_y: number
+    :type d_y: Number
     :param d_z: Задает смещение по оси Z.
-    :type d_z: number
+    :type d_z: Number
 
 * Повернуть относительно оси
 
@@ -389,7 +436,7 @@
     :param axis: Задает ось вращения.
     :type axis: :ref:`Axis <axis>`
     :param angle: Задает угол поворота.
-    :type angle: number
+    :type angle: Number
 
 * Разместить в относительной системе координат
 
@@ -411,17 +458,22 @@
 
 Пример кода:
 
-.. code-block:: console
+.. code-block:: lua
+    :caption: Пример 13:
+    :linenos:
 
-    local cube = Cube(20)
-    local sphere = Sphere(10)
-    renga.geometry.detailed.add_solid(
+    local cube = renga.api.Cube(20)
+    local sphere = renga.api.Sphere(10)
+
+    renga.geometry.detailed:add_solid(
         cube + sphere:shift(10, 0, 10):hide_smooth_edges())
 
 Результат:
 
 .. image:: _static/Add_3D.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 * Булевое вычитание
 
@@ -429,14 +481,19 @@
 
 Пример кода:
 
-.. code-block:: console
+.. code-block:: lua
+    :caption: Пример 14:
+    :linenos:
 
-    local cube = Cube(20)
-    local sphere = Sphere(10)
-    renga.geometry.detailed.add_solid(
+    local cube = renga.api.Cube(20)
+    local sphere = renga.api.Sphere(10)
+
+    renga.geometry.detailed:add_solid(
         cube - sphere:shift(10, 0, 10):hide_smooth_edges())
 
 Результат:
 
 .. image:: _static/Sub_3D.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center

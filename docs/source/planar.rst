@@ -7,24 +7,26 @@
 * :ref:`Двумерные кривые <curve2d>`
 * :ref:`Двумерные регионы <region>`
 
-.. code-block:: console
-    :caption: Пример кода:
+.. code-block:: lua
+    :caption: Пример 1:
+    :linenos:
 
-    local geometry = PlanarGeometryPlane()
-
-    geometry:add_curve(Rectangle(20, 10))
-    geometry:add_curve(Line(Point2d(10, -5),
-                            Point2d(-10, 5)))
-    geometry:add_hatch_basic(Region({ClosedContourByPoints({Point2d(10, -5),
-                                                            Point2d(-10, 5),
-                                                            Point2d(-10, -5)})}))
-
-    renga.geometry.symbol.add_planar_geometry(geometry:set_unscalable(true))
+    local geometry = renga.api.PlanarGeometryPlane()
+    
+    geometry:add_curve(renga.api.Rectangle(20, 10))
+    geometry:add_curve(renga.api.Line(renga.api.Point2d(10, -5),
+                                      renga.api.Point2d(-10, 5)))
+    geometry:add_hatch_basic(renga.api.Region({renga.api.ClosedContourByPoints({renga.api.Point2d(10, -5),
+                                                                                renga.api.Point2d(-10, 5),
+                                                                                renga.api.Point2d(-10, -5)})}))
+    renga.geometry.symbol:add_planar_geometry(geometry:set_unscalable(true))
 
 Результат:
 
 .. image:: _static/PlanarGeometry.png
-    :scale: 50 %
+    :height: 230 px
+    :width: 400 px
+    :align: center
 
 Порождающие функции
 -------------------
@@ -92,9 +94,9 @@
 .. function:: :shift(d_x, d_y)
 
     :param d_x: Задает смещение по оси X.
-    :type d_x: number
+    :type d_x: Number
     :param d_y: Задает смещение по оси Y.
-    :type d_y: number
+    :type d_y: Number
 
 * Повернуть относительно точки
 
@@ -103,7 +105,7 @@
     :param point: Задает точку-центр вращения.
     :type point: :ref:`Point2d <point2d>`
     :param angle: Задает угол поворота.
-    :type angle: number
+    :type angle: Number
 
 * Масштабировать по двум осям относительно указанной точки
 
@@ -112,9 +114,9 @@
     :param point: Задает точку, относительно которой будет масштабироваться кривая.
     :type point: :ref:`Point2d <point2d>`
     :param x_scale: Задает коэффициент масштабирования по оси X.
-    :type x_scale: number
+    :type x_scale: Number
     :param y_scale: Задает коэффициент масштабирования по оси Y.
-    :type y_scale: number
+    :type y_scale: Number
 
 * Добавить кривую к плоской геометрии
 
@@ -149,11 +151,11 @@
 .. function:: :set_unscalable(bool)
 
     :param bool: True - геометрия не масштабируется. False - масштабируется.
-    :type bool: boolean
+    :type bool: Boolean
 
 * Задать приоритет геометрии по оси Z
 
 .. function:: :set_z_index_priority(bool)
 
     :param bool: True - приоритет задан. False - не задан.
-    :type bool: boolean
+    :type bool: Boolean

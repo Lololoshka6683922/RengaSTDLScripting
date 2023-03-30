@@ -79,13 +79,13 @@
     :param center: Задает точку центра спирали.
     :type center: :ref:`Point2d <point2d>`
     :param begin_radius: Задает радиус начала спирали.
-    :type begin_radius: number
+    :type begin_radius: Number
     :param end_radius: Задает радиус конца спирали.
-    :type end_radius: number
+    :type end_radius: Number
     :param begin_angle: Задает угол начала спирали.
-    :type begin_angle: number
+    :type begin_angle: Number
     :param end_angle: Задает угол конца спирали.
-    :type end_angle: number
+    :type end_angle: Number
 
 Окружность
 """"""""""
@@ -96,8 +96,8 @@
 
     :param center: Задает центр окружности.
     :type center: :ref:`Point2d <point2d>`
-    :param radius: Задает радуис окружности.
-    :type radius: number
+    :param radius: Задает радиус окружности.
+    :type radius: Number
 
 Замкнутый контур по точкам
 """"""""""""""""""""""""""
@@ -119,9 +119,9 @@
     :param center: Задает центр эллипса.
     :type center: :ref:`Point2d <point2d>`
     :param half_radius_x: Задает радиус полуоси вдоль оси X.
-    :type half_radius_x: number
+    :type half_radius_x: Number
     :param half_radius_y: Задает радиус полуоси вдоль оси Y.
-    :type half_radius_y: number
+    :type half_radius_y: Number
 
 Дуга эллипса
 """"""""""""
@@ -133,9 +133,9 @@
     :param center: Задает центр эллипса.
     :type center: :ref:`Point2d <point2d>`
     :param half_radius_x: Задает радиус полуоси вдоль оси X.
-    :type half_radius_x: number
+    :type half_radius_x: Number
     :param half_radius_y: Задает радиус полуоси вдоль оси Y.
-    :type half_radius_y: number
+    :type half_radius_y: Number
     :param point1: Задает точку начала дуги.
     :type point1: :ref:`Point2d <point2d>`   
     :param point2: Задает точку конца дуги.
@@ -161,9 +161,9 @@
 .. function:: Rectangle(width, height)
 
     :param width: Задает ширину прямоугольника.
-    :type width: number
+    :type width: Number
     :param height: Задает высоту прямоугольника.
-    :type height: number
+    :type height: Number
 
 Методы класса
 ^^^^^^^^^^^^^
@@ -175,9 +175,9 @@
 .. function:: :shift(d_x, d_y)
 
     :param d_x: Задает смещение по оси X.
-    :type d_x: number
+    :type d_x: Number
     :param d_y: Задает смещение по оси Y.
-    :type d_y: number
+    :type d_y: Number
 
 * Повернуть на угол вокруг точки
 
@@ -186,7 +186,7 @@
     :param point: Задает точку вращения.
     :type point: :ref:`Point2d <point2d>`
     :param angle: Задает угол поворота.
-    :type angle: number
+    :type angle: Number
 
 * Масштабировать по двум осям относительно указанной точки
 
@@ -195,9 +195,9 @@
     :param point: Задает точку, относительно которой будет масштабироваться кривая.
     :type point: :ref:`Point2d <point2d>`
     :param x_scale: Задает коэффициент масштабирования по оси X.
-    :type x_scale: number
+    :type x_scale: Number
     :param y_scale: Задает коэффициент масштабирования по оси Y.
-    :type y_scale: number
+    :type y_scale: Number
 
 * Изменить направление кривой на противоположное
 
@@ -211,16 +211,16 @@
 .. function:: :fillet(radius)
 
     :param radius: Задает радиус скругления.
-    :type radius: number
+    :type radius: Number
 
 * Скруглить два соседних сегмента кривой
 
 .. function:: :fillet_nth(segment_index, radius)
 
     :param segment_index: Задает индекс (порядковый номер) сегмента (вершины?) кривой.
-    :type segment_index: number
+    :type segment_index: Number
     :param radius: Задает радиус скругления.
-    :type radius: number
+    :type radius: Number
 
 * Обрезать кривую по двум точкам
 
@@ -331,9 +331,9 @@
 .. function:: :shift(d_x, d_y)
 
     :param d_x: Задает смещение по оси X.
-    :type d_x: number
+    :type d_x: Number
     :param d_y: Задает смещение по оси Y.
-    :type d_y: number
+    :type d_y: Number
 
 * Повернуть относительно точки
 
@@ -342,7 +342,7 @@
     :param point: Задает точку-центр вращения.
     :type point: :ref:`Point2d <point2d>`
     :param angle: Задает угол поворота.
-    :type angle: number
+    :type angle: Number
 
 * Масштабировать по двум осям относительно указанной точки
 
@@ -351,22 +351,22 @@
     :param point: Задает точку, относительно которой будет масштабироваться кривая.
     :type point: :ref:`Point2d <point2d>`
     :param x_scale: Задает коэффициент масштабирования по оси X.
-    :type x_scale: number
+    :type x_scale: Number
     :param y_scale: Задает коэффициент масштабирования по оси Y.
-    :type y_scale: number
+    :type y_scale: Number
 
 * Вернуть количество контуров в регионе
 
 .. function:: :contour_count()
 
-    :rtype: number
+    :rtype: Number
 
 * Вернуть контур с индексом index
 
 .. function:: :contour(index)
 
     :param index: Задает индекс контура.
-    :type index: number
+    :type index: Number
     :return: Многосегментный контур.
     :rtype: :ref:`Curve2d <curve2d>`
 
@@ -448,11 +448,11 @@
 .. function:: Helix(radius, step, height)
 
     :param radius: Задает радиус спирали.
-    :type radius: number
+    :type radius: Number
     :param step: Задает расстояние между витками спирали.
-    :type step: number
+    :type step: Number
     :param height: Задает высоту спирали.
-    :type height: number
+    :type height: Number
 
 Методы класса
 ^^^^^^^^^^^^^
@@ -464,11 +464,11 @@
 .. function:: :shift(d_x, d_y, d_z)
 
     :param d_x: Задает смещение по оси X.
-    :type d_x: number
+    :type d_x: Number
     :param d_y: Задает смещение по оси Y.
-    :type d_y: number
+    :type d_y: Number
     :param d_z: Задает смещение по оси Z.
-    :type d_z: number
+    :type d_z: Number
 
 * Повернуть относительно оси
 
@@ -477,7 +477,7 @@
     :param axis: Задает ось вращения.
     :type axis: :ref:`Axis <axis>`
     :param angle: Задает угол поворота.
-    :type angle: number
+    :type angle: Number
 
 * Вернуть центр кривой
 
@@ -491,7 +491,7 @@
 .. function:: :fillet(radius)
 
     :param radius: Задает радиус скругления.
-    :type radius: number
+    :type radius: Number
 
 * Вернуть начальную точку кривой
 

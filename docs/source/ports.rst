@@ -1,14 +1,12 @@
-Порты (класс Port)
-==================
+Порты
+=====
 
-Порты служат для подключения оборудования к трассам инженерных систем.
+Порты служат для подключения оборудования к трассам инженерных систем. Они являются объектами таблицы ``renga.ports``.
 
-Конструктор класса:
+Пример создания порта см. :ref:`Создание в Renga точки подключения (порта) объекта <port>`
 
-.. attention:: Этот блок дописывается
-
-Методы класса
--------------
+Методы объекта
+--------------
 
 * Разместить порт в локальной системе координат
 
@@ -27,21 +25,50 @@
 
     :param placement: Задает ЛСК порта.
     :type placement: :ref:`Placement3d <placement3d>`
-    :param axis: Ось порта.
+    :param axis: Задает ось.
     :type axis: :ref:`Axis <axis>`
 
 * Задать параметры порта трубопроводных систем
 
 .. function:: :pipe_attributes(*args)
 
+    :param args: Перечисление параметров.
+    :type args: Имена параметров, указанных в JSON
+
+.. note:: См. Создание параметра — тип параметра :ref:`Enumeration <enumeration>`
+
+.. code-block:: lua
+    :caption: Пример 1. Создание параметров ``connector_type`` и ``nominal_diameter`` порта ``cold_water`` трубопроводной системы.
+    :linenos:
+
+    renga.ports.inlet:pipe_attributes(renga.parameters.cold_water.connector_type,
+                                      renga.parameters.cold_water.nominal_diameter)
+
 * Задать параметры порта трубопроводных систем с резьбовым соединением
 
 .. function:: :pipe_threaded_attributes(*args)
+
+    :param args: Перечисление параметров.
+    :type args: Имена параметров, указанных в JSON
 
 * Задать параметры порта вентиляционных систем с воздуховодами круглого сечения
 
 .. function:: :duct_circular_attributes(*args)
 
+    :param args: Перечисление параметров.
+    :type args: Имена параметров, указанных в JSON
+
 * Задать параметры порта вентиляционных систем с воздуховодами прямоугольного сечения
 
 .. function:: :duct_rectangular_attributes(*args)
+
+    :param args: Перечисление параметров.
+    :type args: Имена параметров, указанных в JSON
+
+.. code-block:: lua
+    :caption: Пример 2. Создание параметров ``connector_type``, ``body_width`` и ``body_height`` порта ``exhaust`` воздуховодной системы.
+    :linenos:
+
+    renga.ports.outlet:duct_rectangular_attributes(renga.parameters.exhaust.connector_type,
+                                                   renga.parameters.dimensions.body_width,
+                                                   renga.parameters.dimensions.body_height)

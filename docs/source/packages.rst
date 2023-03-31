@@ -77,7 +77,7 @@
 
 .. function:: :add_planar_geometry(*args)
 
-    :param args: В качестве аргументов передаётся плоская геометрия и ее методы.
+    :param args: В качестве аргументов передаётся плоская геометрия PlanarGeometryGlobalZ() и ее методы.
     :type args: :doc:`PlanarGeometry <../planar>`
 
 .. code-block:: lua
@@ -133,6 +133,8 @@
 
     plane_geometry:add_curve(curve_2d)
     renga.geometry.symbol:add_planar_geometry(plane_geometry:set_unscalable(true))
+
+.. _port:
 
 Создание в Renga точки подключения (порта) объекта
 """"""""""""""""""""""""""""""""""""""""""""""""""

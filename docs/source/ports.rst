@@ -23,8 +23,6 @@
 
 .. function:: :anchor(axis)
 
-    :param placement: Задает ЛСК порта.
-    :type placement: :ref:`Placement3d <placement3d>`
     :param axis: Задает ось.
     :type axis: :ref:`Axis <axis>`
 

@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Добро пожаловать!
-=================
+Renga Style Template Scripting
+==============================
 
 Скоро здесь появится красивое руководство по созданию шаблонов пользовательских категорий инженерного оборудования в Renga.
 

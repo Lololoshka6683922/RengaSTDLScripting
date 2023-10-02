@@ -25,7 +25,7 @@
     .. |pic1| image:: _static/graph_icon.png
         :scale: 50%
 
-Перед импортом в Renga подготовленные файлы должны быть собраны в один файл с расширением **RST** (**Renga Style Template**, *шаблон стиля Renga*). Сборка осуществляется с помощью утилиты **RstBuilder.exe**, которая входит в комплект разработчика `Renga STDL SDK <https://dl.rengabim.com/STDLSDK/RengaSTDLSDK.zip>`_.
+Перед импортом в `Renga Professional <https://rengabim.com/>`_ подготовленные файлы должны быть собраны в один файл с расширением **RST** (**Renga Style Template**, *шаблон стиля Renga*). Сборка осуществляется с помощью утилиты **RstBuilder.exe**, которая входит в комплект разработчика `Renga STDL SDK <https://dl.rengabim.com/STDLSDK/RengaSTDLSDK.zip>`_.
 
 .. important:: Подробно описано в главе `Сборка шаблона стиля <https://help.rengabim.com/stdl/ru/md__pages__ru_4_template_builder.html>`_ справочного руководства Renga STDL.
 

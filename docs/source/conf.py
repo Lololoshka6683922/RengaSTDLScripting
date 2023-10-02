@@ -9,13 +9,14 @@
 project = 'Renga Style Template Scripting'
 copyright = '2023, Renga Software'
 author = 'Eugene Kiryan'
-release = '1.0'
+release = '2.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
     'sphinx.ext.duration',
+    'sphinxcontrib.luadomain',
 ]
 
 templates_path = ['_templates']
@@ -28,11 +29,9 @@ language = 'ru'
 
 html_static_path = ['_static']
 
-# import sphinx_redactor_theme
-# html_theme = 'sphinx_redactor_theme'
-# html_theme_path = [sphinx_redactor_theme.get_html_theme_path()]
-
 html_theme = 'furo'
+
+html_favicon = '_static/favicon.png'
 
 # These paths are either relative to html_static_path
 # or fully qualified paths (eg. https://...)
@@ -41,5 +40,5 @@ html_css_files = [
     'css/custom.css',
 ]
 
-html_logo = "_static/logo.png"
+html_logo = '_static/RengaProfessional_logo.svg'
 html_title = f"Руководство {project} {release}"

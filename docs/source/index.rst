@@ -6,10 +6,6 @@
 Renga Style Template Scripting
 ==============================
 
-.. image:: https://readthedocs.org/projects/rengastdlscripting/badge/?version=latest
-    :target: https://rengastdlscripting.readthedocs.io/ru/latest/?badge=latest
-    :alt: Documentation Status
-    
 Добро пожаловать в руководство по созданию пользовательских шаблонов стилей инженерного оборудования в Renga!
 
 Содержание

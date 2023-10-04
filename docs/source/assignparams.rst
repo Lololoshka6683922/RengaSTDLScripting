@@ -3,42 +3,42 @@
 
 После импорта шаблона категории в Renga, все параметры, описанные в JSON, будут являться объектами таблицы ``Style`` и храниться в группе, к которой они принадлежат.
 
-.. _parameter:
+.. note:: Имена групп параметров и параметров берутся из JSON
 
-Методы параметров
------------------
+.. _parameter_group:
+
+Доступ к группе параметров
+--------------------------
+
+Получить группу параметров по имени
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. lua:function:: GetParameterGroup(groupName)
+
+    :param groupName: Задает идентификатор (имя) группы параметров.
+    :type groupName: String
+    :return: Группа параметров
+    :rtype: ParameterGroup
+
+Методы группы параметров
+------------------------
 
 Вернуть значение параметра
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. lua:method:: :GetValue()
+.. lua:method:: :GetParameter(parameterName)
 
-    :return: Значение параметра.
+    :param parameterName: Задает идентификатор (имя) :ref:`параметра <parameter>`.
+    :type parameterName: String
+    :return: Параметр
+    :rtype: :ref:`Parameter <parameter>`
 
-Включить или отключить отображение параметра в редакторе стилей объекта
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. lua:method:: :SetVisible(isVisible)
-
-    :param isVisible: Булевое значение (true/false)
-    :rtype: Boolean
-
-Установить возможность редактирования параметра в редакторе стилей объекта
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. lua:method:: :SetEnabled(isEnabled)
-
-    :param isEnabled: Булевое значение (true/false)
-    :rtype: Boolean
-
-.. _access_to_parameters:
+.. _parameter:
 
 Доступ к параметрам
 -------------------
 
 Получить доступ к нужному параметру в скриптовой части можно следующими способами:
-
-.. note:: Имена групп параметров и параметров берутся из JSON
 
 Получить таблицу значений параметров
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -69,9 +69,9 @@
 
 .. lua:function:: GetParameter(groupName, parameterName)
 
-    :param groupName: Задает идентификатор (имя) :doc:`группы параметров <../createparams>`.
+    :param groupName: Задает идентификатор (имя) :ref:`группы параметров <parameter_group>`.
     :type groupName: String
-    :param parameterName: Задает идентификатор (имя) :doc:`параметра <../createparams>`.
+    :param parameterName: Задает идентификатор (имя) :ref:`параметра <parameter>`.
     :type parameterName: String
     :return: Параметр
     :rtype: :ref:`Parameter <parameter>`
@@ -84,17 +84,37 @@
     
     local width = Style.GetParameter("Dimension", "bodyWidth"):GetValue()
 
-Получить группу параметров по имени
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Методы параметров
+-----------------
 
-.. lua:function:: GetParameterGroup(groupName)
+Вернуть значение параметра
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    :param groupName: Задает идентификатор (имя) :doc:`группы параметров <../createparams>`.
-    :type groupName: String
-    :return: Группа параметров
+.. lua:method:: :GetValue()
+
+    :return: Значение параметра.
+
+Общие методы групп параметров и параметров
+------------------------------------------
+
+Включить или отключить отображение в редакторе стилей объекта
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. lua:method:: :SetVisible(isVisible)
+
+    :param isVisible: Булевое значение (true/false)
+    :rtype: Boolean
 
 .. code-block:: lua
     :caption: Пример 3. Скрытие группы параметров ``Dimension`` из диалога стилей объекта.
     :linenos:
     
     Style.GetParameterGroup("Dimension"):SetVisible(false)
+
+Установить возможность редактирования в редакторе стилей объекта
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. lua:method:: :SetEnabled(isEnabled)
+
+    :param isEnabled: Булевое значение (true/false)
+    :rtype: Boolean    

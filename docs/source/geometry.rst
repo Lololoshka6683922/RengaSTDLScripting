@@ -655,7 +655,7 @@
 
 * Булевое вычитание
 
-.. lua:function:: Substract(solid1, solid2)
+.. lua:function:: Subtract(solid1, solid2)
 
     :param solid1: Задает первый операнд операции
     :type solid1: Solid
@@ -673,7 +673,7 @@
     local detailedGeometry = ModelGeometry()
     local cube = CreateBlock(20, 20, 20)
     local sphere = CreateSphere(10)
-    local compoundSolid = Substract(cube, sphere:Shift(10, 0, 10)):ShowTangentEdges(false)
+    local compoundSolid = Subtract(cube, sphere:Shift(10, 0, 10)):ShowTangentEdges(false)
     detailedGeometry:AddSolid(compoundSolid)
     Style.SetDetailedGeometry(detailedGeometry)
 

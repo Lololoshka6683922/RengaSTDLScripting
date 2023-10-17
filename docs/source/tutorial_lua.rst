@@ -218,9 +218,6 @@ Cозданную плоскую геометрию ``geometry`` добавля�
         local direction = parameters[name].connectionDirection
         local side = parameters[name].connectionSide
 
-        print(direction)
-        print(side)
-
         -- векторы по-умолчанию
         local vectorZ = Vector3D(0, 0, 1)
         local vectorX = Vector3D(1, 0, 0)

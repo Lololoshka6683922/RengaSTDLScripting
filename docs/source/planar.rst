@@ -16,9 +16,10 @@
     planarGeometry:AddCurve(CreateRectangle2D(20, 10))
     planarGeometry:AddCurve(CreateLineSegment2D(Point2D(10, -5),
                                                 Point2D(-10, 5)))
-    planarGeometry:AddMaterialColorSolidArea(FillArea({CreatePolyline2D({Point2D(10, -5),
-                                                                         Point2D(-10, 5),
-                                                                         Point2D(-10, -5)})}))
+    planarGeometry:AddLineColorSolidArea(FillArea({CreatePolyline2D({Point2D(10, -5),
+                                                                    Point2D(-10, 5),
+                                                                    Point2D(-10, -5),
+                                                                    Point2D(10, -5)})}))
     symbolGeometry:AddGeometrySet2D(planarGeometry, placement)
     Style.SetSymbolGeometry(symbolGeometry)
 

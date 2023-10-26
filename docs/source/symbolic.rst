@@ -118,10 +118,12 @@
 
 Замкнутая кривая. Относится к односегментным кривым.
 
-.. lua:function:: CreateEllipse2D(centerPoint, halfRadiusX, halfRadiusY)
+.. lua:function:: CreateEllipse2D(centerPoint, angle, halfRadiusX, halfRadiusY)
 
     :param centerPoint: Задает центр эллипса.
     :type centerPoint: :ref:`Point2D <point2d>`
+    :param angle: Задает угол поворота против часовой стрелки относительно центра в радианах.
+    :type angle: Number
     :param halfRadiusX: Задает радиус полуоси вдоль оси X.
     :type halfRadiusX: Number
     :param halfRadiusY: Задает радиус полуоси вдоль оси Y.
@@ -159,7 +161,7 @@
     :param centerPoint: Задает центр прямоугольника.
     :type centerPoint: :ref:`Point2D <point2d>`
     :param angle: Задает угол поворота против часовой стрелки относительно центра в радианах.
-    :type angle: :ref:`Point2D <point2d>`
+    :type angle: Number
     :param width: Задает ширину прямоугольника.
     :type width: Number
     :param height: Задает высоту прямоугольника.

@@ -282,7 +282,7 @@
 
 * Скруглить углы составной кривой
 
-.. lua:method:: :FilletCorners2D(curve, radius)
+.. lua:method:: FilletCorners2D(curve, radius)
 
     :param curve: Задает двумерную кривую.
     :type curve: :ref:`Curve2D <curve2d>`
@@ -291,7 +291,7 @@
 
 * Скруглить два соседних сегмента кривой
 
-.. lua:method:: :FilletCornerAfterSegment2D(curve, segmentIndex, radius)
+.. lua:method:: FilletCornerAfterSegment2D(curve, segmentIndex, radius)
 
     :param curve: Задает двумерную кривую.
     :type curve: :ref:`Curve2D <curve2d>`
@@ -668,7 +668,7 @@
 
 * Скруглить углы составной трёхмерной кривой
 
-.. lua:method:: :FilletCorners3D(curve, radius)
+.. lua:method:: FilletCorners3D(curve, radius)
 
     :param curve: Задает трёхмерную кривую.
     :type curve: :ref:`Curve3D <curve3d>`
@@ -677,10 +677,10 @@
 
 * Скруглить два соседних сегмента трёхмерной кривой
 
-.. lua:method:: :FilletCornerAfterSegment3D(curve,segmentIndex, radius)
+.. lua:method:: FilletCornerAfterSegment3D(curve,segmentIndex, radius)
 
     :param curve: Задает трёхмерную кривую.
-    :type curve: :ref:`Curve2D <curve2d>`
+    :type curve: :ref:`Curve3D <curve3d>`
     :param segmentIndex: Задает индекс (порядковый номер) сегмента кривой.
     :type segmentIndex: Number
     :param radius: Задает радиус скругления.

@@ -272,12 +272,19 @@
 Операторы
 ^^^^^^^^^
 
-* Проверить на равенство с другой кривой
+* Проверить равенство с другой кривой
 
 .. function:: ==
 
-    :return: Двухмерная кривая
-    :rtype: :ref:`Curve2D <curve2d>`
+    :return: Логическое значение
+    :rtype: Boolean
+
+* Проверить неравенство с другой кривой
+
+.. function:: ~=
+
+    :return: Логическое значение
+    :rtype: Boolean
 
 Функции, не члены класса
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -343,7 +350,7 @@
 
     :param outerBoundary: Задает внешний контур из замкнутого составного контура.
     :type outerBoundary: :ref:`Curve2D <curve2d>`
-    :param innerBoundaries: Задает таблицу замкнутых составных контуров, описывающих внутренние границы области заливки.
+    :param innerBoundaries: (optional) Задает таблицу замкнутых составных контуров, описывающих внутренние границы области заливки.
     :type innerBoundaries: table of :ref:`Curves2D <curve2d>`
 
 Методы класса
@@ -409,19 +416,19 @@
 Операторы
 ^^^^^^^^^
 
-* Сравнить на равенство с другим контуром
+* Проверить равенство с другим контуром
 
 .. function:: ==
 
     :return: Логическое значение
     :rtype: Boolean
 
-.. * Сравнить на неравенство с другим контуром
+* Проверить неравенство с другим контуром
 
-    .. function:: !=
+.. function:: ~=
 
-        :return: Логическое значение
-        :rtype: Boolean
+    :return: Логическое значение
+    :rtype: Boolean
 
 .. _curve3d:
 
@@ -507,7 +514,7 @@
 .. lua:function:: CreateEllipticalArc3D(centerPoint, normal, majorVector, majorRadius, minorRadius, startPoint, endPoint, clockwise)
 
     :param centerPoint: Задает центр эллипса.
-    :type centerPoint: :ref:`Point2D <point2d>`
+    :type centerPoint: :ref:`Point3D <point3d>`
     :param normal: Задает вектор, ортогональный плоскости фигуры.
     :type normal: :ref:`Vector3D <vector3d>`
     :param majorVector: Задает вектор, сонаправленный с первой полуосью. Вторая полуось сонаправлена с векторным произведением ``normal * majorVector``.
@@ -517,9 +524,9 @@
     :param minorRadius: Задает радиус второй полуоси.
     :type minorRadius: Number
     :param startPoint: Задает точку начала дуги.
-    :type startPoint: :ref:`Point2D <point2d>`   
+    :type startPoint: :ref:`Point3D <point3d>`   
     :param endPoint: Задает точку конца дуги.
-    :type endPoint: :ref:`Point2D <point2d>`
+    :type endPoint: :ref:`Point3D <point3d>`
     :param clockwise: Задает направление дуги. True - по часовой стрелке, False - против часовой стрелки.
     :type clockwise: Boolean
 
@@ -564,7 +571,7 @@
         :type tStart: Number
         :param tEnd: Задает конечное значение параметра.
         :type tEnd: Number
-        :param placement: Задает координатную плоскость.
+        :param placement: (optional) Задает координатную плоскость. Если система координат не задана, то для построения используется глобальная система координат.
         :type placement: :ref:`Placement3D <placement3d>`
 
 Прямоугольник с центром в начале координат
@@ -658,9 +665,16 @@
 Операторы
 ^^^^^^^^^
 
-* Сравнить на равенство с другим трёхмерным контуром
+* Проверить равенство с другим трёхмерным контуром
 
 .. function:: ==
+
+    :return: Логическое значение
+    :rtype: Boolean
+
+* Проверить неравенство с другим трёхмерным контуром
+
+.. function:: ~=
 
     :return: Логическое значение
     :rtype: Boolean
@@ -679,7 +693,7 @@
 
 * Скруглить два соседних сегмента трёхмерной кривой
 
-.. lua:method:: FilletCornerAfterSegment3D(curve,segmentIndex, radius)
+.. lua:method:: FilletCornerAfterSegment3D(curve, segmentIndex, radius)
 
     :param curve: Задает трёхмерную кривую.
     :type curve: :ref:`Curve3D <curve3d>`

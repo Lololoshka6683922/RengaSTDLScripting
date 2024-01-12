@@ -185,12 +185,12 @@
 
 Основанием пирамиды является прямоугольник.
 
-.. lua:function:: CreateRectangularPyramid(sizeX, sizeY, height, placement)
+.. lua:function:: CreateRectangularPyramid(width, depth, height, placement)
 
-    :param sizeX: Задает размер основания пирамиды по оси X.
-    :type sizeX: Number
-    :param sizeY: Задает размер основания пирамиды по оси Y.
-    :type sizeY: Number    
+    :param width: Задает размер основания пирамиды по оси X.
+    :type width: Number
+    :param depth: Задает размер основания пирамиды по оси Y.
+    :type depth: Number    
     :param height: Задает высоту пирамиды.
     :type height: Number
     :param placement: (optional) Задает локальную систему координат, в которой строится тело. Если не задана, то для построения используется глобальная система координат.
@@ -601,9 +601,16 @@
 Операторы
 ---------
 
-* Проверить на равенство с другой твёрдотельной 3D-геометрией
+* Проверить равенство с другой твёрдотельной 3D-геометрией
 
 .. function:: ==
+
+    :return: Логическое значение
+    :rtype: Boolean
+
+* Проверить неравенство с другой твёрдотельной 3D-геометрией
+
+.. function:: ~=
 
     :return: Логическое значение
     :rtype: Boolean
@@ -642,7 +649,7 @@
     local detailedGeometry = ModelGeometry()
     local cube = CreateBlock(20, 20, 20)
     local sphere = CreateSphere(10)
-    local compoundSolid = Unite(cube, sphere:Shift(10, 0, 10)):ShowTangentEdges(false)
+    local compoundSolid = Unite(cube, sphere:Shift(10, 0, 20)):ShowTangentEdges(false)
     detailedGeometry:AddSolid(compoundSolid)
     Style.SetDetailedGeometry(detailedGeometry)   
 
@@ -673,13 +680,44 @@
     local detailedGeometry = ModelGeometry()
     local cube = CreateBlock(20, 20, 20)
     local sphere = CreateSphere(10)
-    local compoundSolid = Subtract(cube, sphere:Shift(10, 0, 10)):ShowTangentEdges(false)
+    local compoundSolid = Subtract(cube, sphere:Shift(10, 0, 20)):ShowTangentEdges(false)
     detailedGeometry:AddSolid(compoundSolid)
     Style.SetDetailedGeometry(detailedGeometry)
 
 Результат:
 
 .. image:: _static/Sub_3D.png
+    :height: 230 px
+    :width: 400 px
+    :align: center
+
+* Булевое пересечение
+
+.. lua:function:: Intersect(solid1, solid2)
+
+    :param solid1: Задает первый операнд операции
+    :type solid1: Solid
+    :param solid2: Задает второй операнд операции
+    :type solid2: Solid
+    :return: Твердотельная 3D-геометрия.
+    :rtype: Solid
+
+Пример кода:
+
+.. code-block:: lua
+    :caption: Пример 13.
+    :linenos:
+
+    local detailedGeometry = ModelGeometry()
+    local cube = CreateBlock(20, 20, 20)
+    local sphere = CreateSphere(10)
+    local compoundSolid = Intersect(cube, sphere:Shift(10, 0, 20)):ShowTangentEdges(false)
+    detailedGeometry:AddSolid(compoundSolid)
+    Style.SetDetailedGeometry(detailedGeometry)
+
+Результат:
+
+.. image:: _static/Intersect_3D.png
     :height: 230 px
     :width: 400 px
     :align: center

@@ -54,7 +54,7 @@
 Задать параметры соединения порту трубопроводных систем
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. lua:method:: :SetPipeAttributes(pipeConnectorType, nominalDiameter)
+.. lua:method:: :SetPipeParameters(pipeConnectorType, nominalDiameter)
 
     :param pipeConnectorType: Задает тип соединения.
     :type pipeConnectorType: :ref:`CoreEnum <pipe_type>`
@@ -69,12 +69,12 @@
 
     local connectorType = Style.GetParameter("ColdWater", "connectorType"):GetValue()
     local nominalDiameter = Style.GetParameter("ColdWater", "nominalDiameter"):GetValue()
-    Style.GetPort("ColdWater"):SetPipeAttributes(connectorType, nominalDiameter)
+    Style.GetPort("ColdWater"):SetPipeParameters(connectorType, nominalDiameter)
 
 Задать параметры соединения порту трубопроводных систем с резьбовым соединением
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. lua:method:: :SetPipeAttributes(pipeConnectorType, threadSize)
+.. lua:method:: :SetPipeParameters(pipeConnectorType, threadSize)
 
     :param pipeConnectorType: Задает тип соединения.
     :type pipeConnectorType: :ref:`CoreEnum <pipe_type>`
@@ -84,7 +84,7 @@
 Задать параметры соединения порту вентиляционных систем с воздуховодами круглого сечения
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. lua:method:: :SetDuctAttributes(ductConnectorType, circularProfile)
+.. lua:method:: :SetDuctParameters(ductConnectorType, circularProfile)
 
     :param ductConnectorType: Задает тип соединения.
     :type ductConnectorType: :ref:`CoreEnum <air_type>`
@@ -94,14 +94,14 @@
 Задать параметры соединения порту вентиляционных систем с воздуховодами прямоугольного сечения
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. lua:method:: :SetDuctAttributes(ductConnectorType, rectangularProfile)
+.. lua:method:: :SetDuctParameters(ductConnectorType, rectangularProfile)
 
     :param ductConnectorType: Задает тип соединения.
     :type ductConnectorType: :ref:`CoreEnum <air_type>`
     :param rectangularProfile: Задает профиль порта.
     :type rectangularProfile: :ref:`RectangularProfile <rectangular_profile>`
 
-    Дополнительные параметры для метода SetDuctAttributes
+    Дополнительные параметры для метода SetDuctParameters
     """""""""""""""""""""""""""""""""""""""""""""""""""""
 
     .. _circular_profile:
@@ -133,4 +133,4 @@
     local bodyHeight = Style.GetParameter("Dimensions", "bodyHeight"):GetValue()
     local ductProfile = RectangularProfile(bodyWidth, bodyHeight)
 
-    Style.GetPort("Exhaust"):SetDuctRectangularAttributes(connectorType, ductProfile)
+    Style.GetPort("Exhaust"):SetDuctParameters(connectorType, ductProfile)

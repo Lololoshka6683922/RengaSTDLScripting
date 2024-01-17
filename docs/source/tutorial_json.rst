@@ -139,14 +139,14 @@
                 "name" : "connectorType",
                 "text" : "Вид соединения",
                 "type" : "CoreEnum",
-                "enum_type" : "ConnectorType",
+                "coreEnumType" : "PipeConnectorType",
                 "default" : "Thread"
             },
             {
                 "name" : "threadSize",
                 "text" : "Номинальный диаметр",
                 "type" : "CoreEnum",
-                "enum_type" : "PipeThreadSize",
+                "coreEnumType" : "PipeThreadSize",
                 "default" : "D0_50"
             },
             {

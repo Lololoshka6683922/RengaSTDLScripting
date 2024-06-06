@@ -11,9 +11,9 @@
     :linenos:
 
     {
-        "metadata" : {..},
-        "styleParameters" : [..],
-        "ports" : [..]
+        "metadata": {..},
+        "styleParameters": [..],
+        "ports": [..]
     }
 
 Метаданные
@@ -25,11 +25,11 @@
     :linenos:
 
     {
-        "metadata" : {
-            "defaultName" : "Название оборудования",
-            "description" : "Описание",
-            "version" : "1.0.0",
-            "author" : "Иванов Иван Иванович"
+        "metadata": {
+            "defaultName": "Название оборудования",
+            "description": "Описание",
+            "version": "1.0.0",
+            "author": "Иванов Иван Иванович"
         },
         ..
     }
@@ -44,16 +44,16 @@
 
     {
         ..
-        "styleParameters" : [
+        "styleParameters": [
             {
-                "name" : "General",
-                "text" : "Общие",
-                "params" : [..]
+                "name": "General",
+                "text": "Общие",
+                "params": [..]
             },
             {
-                "name" : "Dimensions",
-                "text" : "Габаритные размеры",
-                "params" : [..]
+                "name": "Dimensions",
+                "text": "Габаритные размеры",
+                "params": [..]
             },
             ..
         ],
@@ -100,10 +100,10 @@ ID
     :linenos:
 
     {
-        "name" : "material",
-        "text" : "Материал",
-        "type" : "Id",
-        "entityTypeId" : "0abcb18f-0aaf-4509-bf89-5c5fad9d5d8b"
+        "name": "material",
+        "text": "Материал",
+        "type": "Id",
+        "entityTypeId": "0abcb18f-0aaf-4509-bf89-5c5fad9d5d8b"
     }
 
 Данный параметр отображается в виде раскрывающегося списка (Combobox) для выбора пользователем нужного материала.
@@ -131,22 +131,22 @@ UserEnum
     :linenos:
 
     {
-        "name" : "bodyShape",
-        "text" : "Форма корпуса",
-        "type" : "UserEnum",
-        "default" : "volute",
-        "items" : [
+        "name": "bodyShape",
+        "text": "Форма корпуса",
+        "type": "UserEnum",
+        "default": "volute",
+        "items": [
             {
-                "key" : "rectangle",
-                "text" : "Прямоугольник"            
+                "key": "rectangle",
+                "text": "Прямоугольник"            
             },
             {
-                "key" : "circle",
-                "text" : "Круг"            
+                "key": "circle",
+                "text": "Круг"            
             },
             {
-                "key" : "volute",
-                "text" : "Спираль"            
+                "key": "volute",
+                "text": "Спираль"            
             }
         ]
     }
@@ -179,11 +179,11 @@ CoreEnum
     :linenos:
 
     {
-        "name" : "connectorType",
-        "text" : "Вид соединения",
-        "type" : "CoreEnum",
-        "coreEnumType" : "DuctConnectorType",
-        "default" : "DriveSlip"
+        "name": "connectorType",
+        "text": "Вид соединения",
+        "type": "CoreEnum",
+        "coreEnumType": "DuctConnectorType",
+        "default": "DriveSlip"
     }
 
 Данный параметр отображается в виде раскрывающегося списка (Combobox) для выбора пользователем нужного значения.
@@ -212,12 +212,12 @@ Length
     :linenos:
 
     {
-        "name" : "nominalDiameter",
-        "text" : "Номинальный диаметр",
-        "type" : "Length",
-        "default" : 225,
-        "min" : 10,
-        "max" : 1000000
+        "name": "nominalDiameter",
+        "text": "Номинальный диаметр",
+        "type": "Length",
+        "default": 225,
+        "min": 10,
+        "max": 1000000
     }
 
 Данный параметр отображается в виде поля для ввода пользователем нужного значения.
@@ -249,12 +249,12 @@ Angle
     :linenos:
 
     {
-        "name" : "angleBetweenInletAndBody",
-        "text" : "Угол между входом и корпусом",
-        "type" : "Angle",
-        "default" : 135,
-        "min" : 0,
-        "max" : 180
+        "name": "angleBetweenInletAndBody",
+        "text": "Угол между входом и корпусом",
+        "type": "Angle",
+        "default": 135,
+        "min": 0,
+        "max": 180
     }
 
 Данный параметр отображается в виде поля для ввода пользователем нужного значения.
@@ -279,10 +279,10 @@ Boolean
     :linenos:
 
     {
-        "name" : "isMounted",
-        "text" : "Навесное",
-        "type" : "Boolean",
-        "default" : false
+        "name": "isMounted",
+        "text": "Навесное",
+        "type": "Boolean",
+        "default": false
     }
 
 Данный параметр отображается в виде раскрывающегося списка (Combobox) для выбора пользователем нужного значения.
@@ -349,28 +349,28 @@ String
 
     {
         ..
-        "ports" : [
+        "ports": [
             {
-                "name" : "coldWater",
-                "text" : "Бытовое холодное водоснабжение",
-                "flowDirection" : "Inlet"
-                "systemCategories" : [
+                "name": "coldWater",
+                "text": "Бытовое холодное водоснабжение",
+                "flowDirection": "Inlet"
+                "systemCategories": [
                     "DomesticColdWater"
                 ]
             },
             {
-                "name" : "hotWater",
-                "text" : "Бытовое горячее водоснабжение",
-                "flowDirection" : "Inlet"
-                "systemCategories" : [
+                "name": "hotWater",
+                "text": "Бытовое горячее водоснабжение",
+                "flowDirection": "Inlet"
+                "systemCategories": [
                     "DomesticHotWater"
                  ]
             },
             {
-                "name" : "sewage",
-                "text" : "Канализация",
-                "flowDirection" : "Outlet"
-                "systemCategories" : [
+                "name": "sewage",
+                "text": "Канализация",
+                "flowDirection": "Outlet"
+                "systemCategories": [
                     "DomesticSewage",
                     "IndustrialSewage"
                 ]
@@ -378,6 +378,59 @@ String
             ..
         ]
     }
+
+.. _port_role:
+
+.. versionadded:: 1.1 Описание портов **аксессуара трубопровода и аксессуара воздуховода** может содержать параметр ``portRole``, позволяющий определить роль порта. Допустимые значения:
+
++-------------------+----------------------------------------------------------+
+| идентификатор     | описание                                                 |
++===================+==========================================================+
+| TransitPort       | транзитный порт — порт для размещения объекта на трассе  |
++-------------------+----------------------------------------------------------+
+| EndPort           | конечный порт — порт для создания трассы от объекта      |
++-------------------+----------------------------------------------------------+
+
+Например, чтобы аксессуар трубопровода можно было и разместить на трубопроводной трассе, и подключить к электрической системе, опишите порты следующим образом:
+
+.. code-block::
+    :caption: Пример 6. Описание портов аксессуара трубопровода с определенными ролями портов.
+    :linenos:
+
+    {
+        ..
+        "ports": [
+            {
+                "name": "PipeInlet",
+                "text": "Трубопроводный вход",
+                "flowDirection": "Inlet",
+                "portRole": "TransitPort",
+                "systemCategories": [
+                    // Список категорий трубопроводных систем
+                ]
+            },
+            {
+                "name": "PipeOutlet",
+                "text": "Трубопроводный выход",
+                "flowDirection": "Outlet",
+                "portRole": "TransitPort",
+                "systemCategories": [
+                    // Список категорий трубопроводных систем
+                ]
+            },
+            {
+                "name": "ElectricPort",
+                "text": "Для подключения электричества",
+                "flowDirection": "InletAndOutlet",
+                "portRole": "EndPort",
+                "systemCategories": [
+                    "PowerCircuit"
+                ]
+            }
+        ]
+    }
+
+
 
 .. _p_system:
 

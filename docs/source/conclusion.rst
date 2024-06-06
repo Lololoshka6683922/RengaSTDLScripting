@@ -3,11 +3,11 @@
 
 Подготовленные файлы описания шаблона стиля необходимо собрать в RST с помощью утилиты **RstBuilder.exe**, которая входит в комплект разработчика `Renga STDL SDK <https://dl.rengabim.com/STDLSDK/RengaSTDLSDK.zip>`_.
 
-.. important:: Подробно описано в главе `Сборка шаблона стиля <https://help.rengabim.com/stdl/ru/md__pages__ru_4_template_builder.html>`_ справочного руководства Renga STDL
+.. important:: Подробно описано в главе `Сборка шаблона стиля <https://help.rengabim.com/stdl/ru/style_template_building.html>`_ справочного руководства Renga STDL
 
 Перед добавлением шаблона стиля в пользовательские проекты его необходимо протестировать и убедиться в корректности работы.
 
-.. important:: Подробно описано в главе `Тестирование и отладка <https://help.rengabim.com/stdl/ru/md__pages__ru_5_testing.html>`_ справочного руководства Renga STDL
+.. important:: Подробно описано в главе `Тестирование и отладка <https://help.rengabim.com/stdl/ru/testing_and_debugging.html>`_ справочного руководства Renga STDL
 
 Что дальше?
 -----------

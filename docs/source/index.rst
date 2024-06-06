@@ -16,6 +16,8 @@ Renga Style Template Scripting
 
    environment
 
+   whatsnew
+
 .. toctree::
    :maxdepth: 2
    :caption: Параметризация:

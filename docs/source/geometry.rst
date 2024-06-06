@@ -295,8 +295,7 @@
     local params = ExtrusionParameters(40)
     -- значения дополнительным атрибутам ExtrusionParameters() не задаем, значения принимаются по умолчанию
     local moldingSolid = Extrude(extrusionContour,
-                                 params,
-                                 placement)
+                                 params)
     detailedGeometry:AddSolid(moldingSolid)
     Style.SetDetailedGeometry(detailedGeometry)
 
@@ -332,8 +331,7 @@
     -- толщина отступа наружу и внутрь относительно заданного контура = 0.5:
     params.OutwardOffset = params.InwardOffset = 0.5
     local thinSolid = Extrude(profileContour,
-                              params,
-                              placement)
+                              params)
     detailedGeometry:AddSolid(thinSolid)
     Style.SetDetailedGeometry(detailedGeometry)
 
@@ -418,16 +416,17 @@
         Placement3D(Point3D(0, 0, 0),
                     Vector3D(1, 0, 0),
                     Vector3D(0, 1, 0)),
-        Placement3D(Point3D(40, 0, 0),
+        Placement3D(Point3D(30, 0, 30),
                     Vector3D(0, 0, 1),
                     Vector3D(1, 0, 0))}
-    -- создаем направляющую кривую        
-    local guideArc3D = CreateArc3DByCenterStartEndPoints(Point3D(0, 0, 0),
-                                                         Point3D(0, 0, 30),
-                                                         Point3D(30, 0, 30),
-                                                         false)
+    -- создаем направляющую кривую
+    local guideArc3D = CreateArc3DByCenterStartEndPoints(Point3D(0, 0, 30),
+                                                        Point3D(0, 0, 0),
+                                                        Point3D(30, 0, 30),
+                                                        false)
     -- указываем направляющую кривую в дополнительных параметрах LoftParameters()
-    local loftParams = LoftParameters().GuideCurve(guideArc3D)    
+    local loftParams = LoftParameters()
+    loftParams.GuideCurve = guideArc3D
     local loftedSolid = Loft(profiles, placements, loftParams)
     detailedGeometry:AddSolid(loftedSolid)
     Style.SetDetailedGeometry(detailedGeometry)
@@ -474,8 +473,8 @@
 
             .. note:: Используются для построения тонкостенного тела. При ``OutwardOffset`` = 0 и ``InwardOffset`` = 0 строится сплошное тело по контуру.
 
-            * **counterClockwiseAngle** (``Number``) - Задает угол вращения против часовой стрелки в радианах.
-            * **clockwiseAngle** (``Number``) - Задает угол вращения по часовой стрелке в радианах.
+            * **CounterClockwiseRotationAngle** (``Number``) - Задает угол вращения против часовой стрелки в радианах.
+            * **ClockwiseRotationAngle** (``Number``) - Задает угол вращения по часовой стрелке в радианах.
 
 .. code-block:: lua
     :caption: Пример 11.
@@ -483,14 +482,14 @@
 
     local detailedGeometry = ModelGeometry()
     local placement = Placement3D(Point3D(0, 0, 0),
-                                  Vector3D(1, 0, 0),
-                                  Vector3D(0, 1, 0))
+                                Vector3D(1, 0, 0),
+                                Vector3D(0, 1, 0))
     local contour = CreateRectangle2D(Point2D(0, 0), 0, 6, 15)
     FilletCornerAfterSegment2D(contour, 3, 3)
     FilletCornerAfterSegment2D(contour, 5, 3)
     -- дополнительные параметры построение RevolutionParameters()
     local params = RevolutionParameters(0)
-    RevolutionParameters.clockwiseAngle = math.rad(270)
+    params.ClockwiseRotationAngle = math.rad(270)
     -- создание геометрии
     local revolutionSolid = Revolve(contour,
                                     placement,

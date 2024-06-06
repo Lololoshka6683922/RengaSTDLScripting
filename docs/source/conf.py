@@ -7,9 +7,9 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Renga Style Template Scripting'
-copyright = '2023, Renga Software'
+copyright = '2024, Renga Software'
 author = 'Eugene Kiryan'
-release = '1.0'
+release = '1.1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

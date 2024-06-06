@@ -1,5 +1,5 @@
 Плоская 2D-геометрия (класс GeometrySet2D)
-=========================================
+==========================================
 
 Общий класс **GeometrySet2D** не имеет конструктора. Служит для создания условного или символьного уровня детализации стиля.
 Является контейнером, вмещающим в себя графические примитивы (из которых будет состоять УГО) таких типов, как:
@@ -13,13 +13,14 @@
 
     local symbolGeometry = ModelGeometry()
     local planarGeometry = GeometrySet2D()    
-    planarGeometry:AddCurve(CreateRectangle2D(20, 10))
+    planarGeometry:AddCurve(CreateRectangle2D(Point2D(0, 0), 0, 20, 10))
     planarGeometry:AddCurve(CreateLineSegment2D(Point2D(10, -5),
                                                 Point2D(-10, 5)))
     planarGeometry:AddLineColorSolidArea(FillArea({CreatePolyline2D({Point2D(10, -5),
                                                                     Point2D(-10, 5),
                                                                     Point2D(-10, -5),
                                                                     Point2D(10, -5)})}))
+    local placement = Placement3D(Point3D(0, 0, 0), Vector3D(0, 0 ,1), Vector3D(1, 0, 0))
     symbolGeometry:AddGeometrySet2D(planarGeometry, placement)
     Style.SetSymbolGeometry(symbolGeometry)
 
@@ -75,7 +76,7 @@
 
 .. lua:method:: :Clone()
 
-    :return: Копия планарной геометрии
+    :return: Копия двумерной геометрии
     :rtype: GeometrySet2D
 
 * Добавить кривую к двумерной геометрии
@@ -98,3 +99,20 @@
 
     :param region: Задает область заливки.
     :type region: :ref:`FillArea <fillarea>`
+
+Операторы
+---------
+
+.. versionadded:: 1.1 Проверить равенство с другой двумерной геометрией
+
+.. function:: ==
+
+    :return: Логическое значение
+    :rtype: Boolean
+
+.. versionadded:: 1.1 Проверить неравенство с другой двумерной геометрией
+
+.. function:: ~=
+
+    :return: Логическое значение
+    :rtype: Boolean

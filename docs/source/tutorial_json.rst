@@ -17,11 +17,11 @@
     :caption: Внесение информации о шаблоне в объект ``metadata``
     :linenos:
 
-    "metadata" : {
-        "defaultName" : "Настенный блок VRF",
-        "description" : "Общий шаблон внутренних блоков настенного типа мультизональных VRF-систем",
-        "version" : "1.0.0",
-        "author" : "Иванов Иван Иванович"
+    "metadata": {
+        "defaultName": "Настенный блок VRF",
+        "description": "Общий шаблон внутренних блоков настенного типа мультизональных VRF-систем",
+        "version": "1.0.0",
+        "author": "Иванов Иван Иванович"
     }
 
 3. Создадим группы параметров, которые будут отображаться в диалоге стиля объекта.
@@ -34,36 +34,36 @@
     :caption: Создание групп параметров в массиве ``styleParameters``
     :linenos:
 
-    "styleParameters" : [
+    "styleParameters": [
             {
-                "name" : "General",
-                "text" : "Общие",
-                "params" : []
+                "name": "General",
+                "text": "Общие",
+                "params": []
             },
             {
-                "name" : "Dimensions",
-                "text" : "Габаритные размеры",
-                "params" : []
+                "name": "Dimensions",
+                "text": "Габаритные размеры",
+                "params": []
             },
             {
-                "name" : "WaterCoolant",
-                "text" : "Подача жидкости (вход)",
-                "params" : []
+                "name": "WaterCoolant",
+                "text": "Подача жидкости (вход)",
+                "params": []
             },
             {
-                "name" : "GasCoolant",
-                "text" : "Подача газа (вход)",
-                "params" : []
+                "name": "GasCoolant",
+                "text": "Подача газа (вход)",
+                "params": []
             },
             {
-                "name" : "Drainage",
-                "text" : "Дренаж (выход)",
-                "params" : []
+                "name": "Drainage",
+                "text": "Дренаж (выход)",
+                "params": []
             },
             {
-                "name" : "ElectricConnectors",
-                "text" : "Вводные электрические линии",
-                "params" : []
+                "name": "ElectricConnectors",
+                "text": "Вводные электрические линии",
+                "params": []
             }
         ]
 
@@ -74,14 +74,14 @@
     :linenos:
 
     {
-        "name" : "General",
-        "text" : "Общие",
-        "params" : [
+        "name": "General",
+        "text": "Общие",
+        "params": [
             {
-                "name" : "material",
-                "text" : "Материал",
-                "type" : "Id",
-                "entityTypeId" : "0abcb18f-0aaf-4509-bf89-5c5fad9d5d8b"
+                "name": "material",
+                "text": "Материал",
+                "type": "Id",
+                "entityTypeId": "0abcb18f-0aaf-4509-bf89-5c5fad9d5d8b"
             }
         ]
     }
@@ -93,32 +93,32 @@
     :linenos:
 
     {
-        "name" : "Dimensions",
-        "text" : "Габаритные размеры",
-        "params" : [
+        "name": "Dimensions",
+        "text": "Габаритные размеры",
+        "params": [
             {
-                "name" : "bodyLength",
-                "text" : "Длина корпуса",
-                "type" : "Length",
-                "default" : 970,
-                "min" : 100,
-                "max" : 2000
+                "name": "bodyLength",
+                "text": "Длина корпуса",
+                "type": "Length",
+                "default": 970,
+                "min": 100,
+                "max": 2000
             },
             {
-                "name" : "bodyWidth",
-                "text" : "Ширина корпуса",
-                "type" : "Length",
-                "default" : 235,
-                "min" : 100,
-                "max" : 2000
+                "name": "bodyWidth",
+                "text": "Ширина корпуса",
+                "type": "Length",
+                "default": 235,
+                "min": 100,
+                "max": 2000
             },
             {
-                "name" : "bodyHeight",
-                "text" : "Высота корпуса",
-                "type" : "Length",
-                "default" : 315,
-                "min" : 100,
-                "max" : 2000
+                "name": "bodyHeight",
+                "text": "Высота корпуса",
+                "type": "Length",
+                "default": 315,
+                "min": 100,
+                "max": 2000
             }
         ]
     }
@@ -132,30 +132,30 @@
     :linenos:
 
     {
-        "name" : "WaterCoolant",
-        "text" : "Подача жидкости (вход)",
-        "params" : [
+        "name": "WaterCoolant",
+        "text": "Подача жидкости (вход)",
+        "params": [
             {
-                "name" : "connectorType",
-                "text" : "Вид соединения",
-                "type" : "CoreEnum",
-                "coreEnumType" : "PipeConnectorType",
-                "default" : "Thread"
+                "name": "connectorType",
+                "text": "Вид соединения",
+                "type": "CoreEnum",
+                "coreEnumType": "PipeConnectorType",
+                "default": "Thread"
             },
             {
-                "name" : "threadSize",
-                "text" : "Номинальный диаметр",
-                "type" : "CoreEnum",
-                "coreEnumType" : "PipeThreadSize",
-                "default" : "D0_50"
+                "name": "threadSize",
+                "text": "Номинальный диаметр",
+                "type": "CoreEnum",
+                "coreEnumType": "PipeThreadSize",
+                "default": "D0_50"
             },
             {
-                "name" : "nominalDiameter",
-                "text" : "Номинальный диаметр",
-                "type" : "Length",
-                "default" : 6.35,
-                "min" : 1,
-                "max" : 100
+                "name": "nominalDiameter",
+                "text": "Номинальный диаметр",
+                "type": "Length",
+                "default": 6.35,
+                "min": 1,
+                "max": 100
             },
             ..
         ]
@@ -187,60 +187,60 @@
     :linenos:
 
     {
-        "name" : "WaterCoolant",
-        "text" : "Подача жидкости (вход)",
-        "params" : [
+        "name": "WaterCoolant",
+        "text": "Подача жидкости (вход)",
+        "params": [
             ..
             {
-                "name" : "connectionSide",
-                "text" : "Сторона подключения",
-                "type" : "UserEnum",
-                "default" : "right",
-                "items" : [
+                "name": "connectionSide",
+                "text": "Сторона подключения",
+                "type": "UserEnum",
+                "default": "right",
+                "items": [
                     {
-                        "key" : "right",
-                        "text" : "Справа"
+                        "key": "right",
+                        "text": "Справа"
                     },
                     {
-                        "key" : "left",
-                        "text" : "Слева"
+                        "key": "left",
+                        "text": "Слева"
                     }
                 ]
             },
             {
-                "name" : "connectionDirection",
-                "text" : "Направление подключения",
-                "type" : "UserEnum",
-                "default" : "side",
-                "items" : [
+                "name": "connectionDirection",
+                "text": "Направление подключения",
+                "type": "UserEnum",
+                "default": "side",
+                "items": [
                     {
-                        "key" : "side",
-                        "text" : "Сбоку"
+                        "key": "side",
+                        "text": "Сбоку"
                     },
                     {
-                        "key" : "back",
-                        "text" : "Сзади"
+                        "key": "back",
+                        "text": "Сзади"
                     },
                     {
-                        "key" : "below",
-                        "text" : "Снизу"
+                        "key": "below",
+                        "text": "Снизу"
                     }
                 ]
             },
             {
-                "name" : "portIndentation",
-                "text" : "Отступ точки подключения",
-                "type" : "Length",
-                "default" : 50,
-                "min" : 0,
-                "max" : 200
+                "name": "portIndentation",
+                "text": "Отступ точки подключения",
+                "type": "Length",
+                "default": 50,
+                "min": 0,
+                "max": 200
             }
         ]
     }
 
 7. Следующие две группы параметров ``GasCoolant`` и ``Drainage`` также описывают подключение к трубопроводным системам. Поэтому мы можем использовать аналогичные параметры для задания соединения ``connectorType``, ``nominalDiameter``, ``threadSize``, ``connectionSide``, ``connectionDirection`` и ``portIndentation``. Скопируем их из группы ``WaterCoolant`` и присвоим характерные значения по-умолчанию ``default``.
 
-.. important:: В параметре ``connectorType`` мы использовали список идентификаторов для создания видов соединения к трубопроводным системам. Для создания видов соединения к вентиляционным системам необходимо использовать системное перечисление ``"type" : "DuctConnectorType"`` со своим списком вариантов. См. :doc:`идентификаторы системных перечислений </coreenums>`
+.. important:: В параметре ``connectorType`` мы использовали список идентификаторов для создания видов соединения к трубопроводным системам. Для создания видов соединения к вентиляционным системам необходимо использовать системное перечисление ``"type": "DuctConnectorType"`` со своим списком вариантов. См. :doc:`идентификаторы системных перечислений </coreenums>`
 
 8. Перейдём к описанию параметров соединения с электрическими системами группы ``ElectricConnectors``. В описании оборудования мы определили, что будет 3 точки подключения (к силовой сети, сети управления/связи и проводному пульту управления). Добавим в статической части характерные параметры для этих точек подключения: расположение ``portLocation`` и расстояние между ними ``distanceBetweenPorts``, ``portIndentation``.
 
@@ -253,44 +253,44 @@
     :linenos:
 
     {
-        "name" : "ElectricConnectors",
-        "text" : "Вводные электрические линии",
-        "params" : [
+        "name": "ElectricConnectors",
+        "text": "Вводные электрические линии",
+        "params": [
             {
-                "name" : "portLocation",
-                "text" : "Расположение точек подключения",
-                "type" : "UserEnum",
-                "default" : "center",
-                "items" : [
+                "name": "portLocation",
+                "text": "Расположение точек подключения",
+                "type": "UserEnum",
+                "default": "center",
+                "items": [
                         {
-                            "key" : "right",
-                            "text" : "Справа"
+                            "key": "right",
+                            "text": "Справа"
                         },
                         {
-                            "key" : "center",
-                            "text" : "По центру"
+                            "key": "center",
+                            "text": "По центру"
                         },
                         {
-                            "key" : "left",
-                            "text" : "Слева"
+                            "key": "left",
+                            "text": "Слева"
                         }
                     ]
             },
             {
-                "name" : "distanceBetweenPorts",
-                "text" : "Расстояние между точками подключения",
-                "type" : "Length",
-                "default" : 12,
-                "min" : 0,
-                "max" : 30
+                "name": "distanceBetweenPorts",
+                "text": "Расстояние между точками подключения",
+                "type": "Length",
+                "default": 12,
+                "min": 0,
+                "max": 30
             },
             {
-                "name" : "portIndentation",
-                "text" : "Отступ точек подключения",
-                "type" : "Length",
-                "default" : 6,
-                "min" : 0,
-                "max" : 200
+                "name": "portIndentation",
+                "text": "Отступ точек подключения",
+                "type": "Length",
+                "default": 6,
+                "min": 0,
+                "max": 200
             }
         ]
     }
@@ -312,24 +312,24 @@
     :linenos:
 
     {
-        "ports" : [
+        "ports": [
             {
-                "name" : "WaterCoolant"
+                "name": "WaterCoolant"
             },
             {
-                "name" : "GasCoolant"
+                "name": "GasCoolant"
             },
             {
-                "name" : "Drainage"
+                "name": "Drainage"
             },
             {
-                "name" : "PowerSupplyLine"
+                "name": "PowerSupplyLine"
             },
             {
-                "name" : "ControlNetwork1"
+                "name": "ControlNetwork1"
             },
             {
-                "name" : "ControlNetwork2"
+                "name": "ControlNetwork2"
             }
         ]
     }
@@ -343,13 +343,13 @@
     :linenos:
 
     {
-        "ports" : {
+        "ports": {
             ..
             {
-                "name" : "Drainage",
-                "text" : "Канализация",
-                "flowDirection" : "Outlet",
-                "systemCategories" : [
+                "name": "Drainage",
+                "text": "Канализация",
+                "flowDirection": "Outlet",
+                "systemCategories": [
                     "DomesticSewage",
                     "IndustrialSewage",
                     "OtherPipeSystem"
@@ -385,51 +385,51 @@
     :linenos:
 
     {
-        "ports" : [
+        "ports": [
             {
-                "name" : "WaterCoolant",
-                "text" : "Жидкостный трубопровод",
-                "flowDirection" : "Inlet",
-                "systemCategories" : [
+                "name": "WaterCoolant",
+                "text": "Жидкостный трубопровод",
+                "flowDirection": "Inlet",
+                "systemCategories": [
                     "OtherPipeSystem"
                 ]
             },
             {
-                "name" : "GasCoolant",
-                "text" : "Фреоновый трубопровод",
-                "flowDirection" : "Inlet",
-                "systemCategories" : [
+                "name": "GasCoolant",
+                "text": "Фреоновый трубопровод",
+                "flowDirection": "Inlet",
+                "systemCategories": [
                     "OtherPipeSystem"
                 ]
             },
             {
-                "name" : "Drainage",
-                "text" : "Канализация",
-                "flowDirection" : "Outlet",
-                "systemCategories" : [
+                "name": "Drainage",
+                "text": "Канализация",
+                "flowDirection": "Outlet",
+                "systemCategories": [
                     "DomesticSewage",
                     "IndustrialSewage",
                     "OtherPipeSystem"
                 ]
             },
             {
-                "name" : "PowerSupplyLine",
-                "text" : "Силовая линия",
-                "systemCategories" : [
+                "name": "PowerSupplyLine",
+                "text": "Силовая линия",
+                "systemCategories": [
                     "PowerCircuit"
                 ]
             },
             {
-                "name" : "ControlNetwork1",
-                "text" : "Линия управления 1",
-                "systemCategories" : [
+                "name": "ControlNetwork1",
+                "text": "Линия управления 1",
+                "systemCategories": [
                     "OtherElectricalSystem"
                 ]
             },
             {
-                "name" : "ControlNetwork2",
-                "text" : "Линия управления 2",
-                "systemCategories" : [
+                "name": "ControlNetwork2",
+                "text": "Линия управления 2",
+                "systemCategories": [
                     "OtherElectricalSystem"
                 ]
             }

@@ -74,4 +74,4 @@
     :param args: Задает функцию или переменную, сконвертированную в строку.
     :type args: String
 
-.. note:: Подробнее про использование функции print() см. главу `Тестирование и отладка <https://help.rengabim.com/stdl/ru/md__pages__ru_5_testing.html>`_ справочного руководства Renga STDL
+.. note:: Подробнее про использование функции print() см. главу `Тестирование и отладка <https://help.rengabim.com/stdl/ru/testing_and_debugging.html>`_ справочного руководства Renga STDL

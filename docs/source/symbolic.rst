@@ -467,7 +467,7 @@
 
 Дуга, построенная по центру окружности, начальной и конечной точке в трёхмерном пространстве. Относится к односегментным кривым.
 
-.. lua:function:: CreateArc3DByCenterStartEndPoints(centerPoint, startPoint, endPoint, clockwise)
+.. lua:function:: CreateArc3DByCenterStartEndPoints(centerPoint, startPoint, endPoint, counterClockwise)
 
     :param centerPoint: Задает точку центра дуги.
     :type centerPoint: :ref:`Point3D <point3d>`
@@ -475,8 +475,8 @@
     :type startPoint: :ref:`Point3D <point3d>`
     :param endPoint: Задает точку конца дуги.
     :type endPoint: :ref:`Point3D <point3d>`
-    :param clockwise: Задает направление дуги. True - по часовой стрелке, False - против часовой стрелки.
-    :type clockwise: Boolean
+    :param counterClockwise: Задает направление дуги. True - против часовой стрелки, False - по часовой стрелке.
+    :type counterClockwise: Boolean
 
 Окружность в трёхмерном пространстве
 """"""""""""""""""""""""""""""""""""

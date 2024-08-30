@@ -16,10 +16,10 @@
     planarGeometry:AddCurve(CreateRectangle2D(Point2D(0, 0), 0, 20, 10))
     planarGeometry:AddCurve(CreateLineSegment2D(Point2D(10, -5),
                                                 Point2D(-10, 5)))
-    planarGeometry:AddLineColorSolidArea(FillArea({CreatePolyline2D({Point2D(10, -5),
+    planarGeometry:AddLineColorSolidArea(FillArea(CreatePolyline2D({Point2D(10, -5),
                                                                     Point2D(-10, 5),
                                                                     Point2D(-10, -5),
-                                                                    Point2D(10, -5)})}))
+                                                                    Point2D(10, -5)})))
     local placement = Placement3D(Point3D(0, 0, 0), Vector3D(0, 0 ,1), Vector3D(1, 0, 0))
     symbolGeometry:AddGeometrySet2D(planarGeometry, placement)
     Style.SetSymbolGeometry(symbolGeometry)

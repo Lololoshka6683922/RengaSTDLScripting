@@ -1,5 +1,9 @@
 STDL-скрипт
-============
+============ 
+local detailedGeometry = ModelGeometry()
+local coneSolid = CreateRightCircularCone(10, 40)
+detailedGeometry:AddSolid(coneSolid:ShowTangentEdges(false))
+Style.SetDetailedGeometry(detailedGeometry)
 
 Перейдём к описанию динамической части описания шаблонной категории. Это создание скрипта на языке Lua, создающий на основе параметров из ``parameters.json`` категорию объекта 
 
